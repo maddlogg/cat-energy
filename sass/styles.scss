@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  transform: translateX(1px);
+  box-sizing: border-box;
+}
+
+p::first-letter {
+  initial-letter: 3.5 3;
+}

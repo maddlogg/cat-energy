@@ -1,0 +1,33 @@
+@import "./../variables/variables.scss";
+
+.site-list {
+  display: flex;
+
+  &__item {
+    margin-left: 36px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    padding: 0 0 5px;
+
+    &--active {
+      border-bottom: 2px solid white;
+    }
+  }
+
+  &__link {
+    font-size: $basefontSize * 1.25;
+    text-transform: uppercase;
+
+    color: $colorTextNav;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
+  }
+}

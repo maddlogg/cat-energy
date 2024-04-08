@@ -15,8 +15,7 @@
   "browserslist": [
     "last 25 versions",
     ">0.2%",
-    "ie 11",
-    "not dead"
+    "ie 11"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

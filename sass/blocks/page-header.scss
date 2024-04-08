@@ -1,0 +1,22 @@
+.page-header {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 70px;
+  padding: 50px 110px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 50%;
+    height: 700px;
+
+    background: url(/img/index-background-desktop.jpg.jpg) 50% no-repeat;
+    background-position: top right;
+  }
+}

@@ -1,0 +1,38 @@
+@import "./../variables/variables.scss";
+
+.slim {
+  position: relative;
+
+  padding: 40px 50px 55px 50px;
+
+  min-width: 280px;
+  min-height: 266px;
+  max-width: 570px;
+
+  background-color: $colorAddBg;
+
+  &__title {
+    margin-top: 35px;
+    margin-bottom: 70px;
+
+    font-size: $titleFontSizeSmall;
+    line-height: $titleLineHeightSmall;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__description {
+    color: $colorTextP;
+
+    font-size: $basefontSize;
+    line-height: $baseLineHeight;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  &__catalog-link {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,83 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.advatanges {
+  &__title {
+    margin-top: 0;
+    margin-left: 110px;
+    margin-bottom: 70px;
+
+    font-size: $titleFontSize;
+    font-weight: inherit;
+    line-height: $titleLineHeight;
+  }
+
+  &__wrapper {
+    margin: 0 110px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+
+    width: 240px;
+    height: 230px;
+    padding-top: 115px;
+
+    &::before,
+    &:first-child::before {
+      @include list-item-before;
+      background-image: url(/img/advantage-1.png);
+    }
+
+    &:nth-child(2)::before {
+      @include list-item-before;
+      background-image: url(/img/andvantage-2.png);
+    }
+
+    &:nth-child(3)::before {
+      @include list-item-before;
+      background-image: url(/img/advantage-3.png);
+    }
+
+    &:nth-child(4)::before {
+      @include list-item-before;
+      background-image: url(/img/advantage-4.png);
+    }
+
+    &::after,
+    &:first-child::after {
+      @include list-item-after;
+      content: "1";
+    }
+
+    &:nth-child(2)::after {
+      @include list-item-after;
+      content: "2";
+    }
+
+    &:nth-child(3)::after {
+      @include list-item-after;
+      content: "3";
+    }
+
+    &:nth-child(4)::after {
+      @include list-item-after;
+      content: "4";
+    }
+  }
+
+  &__description {
+    padding: 0;
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: $basefontSize;
+    line-height: $baseLineHeight;
+  }
+}

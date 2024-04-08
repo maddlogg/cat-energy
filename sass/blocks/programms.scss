@@ -1,0 +1,60 @@
+@import "./../variables/variables.scss";
+
+.programms {
+  min-height: 1055px;
+  margin-bottom: 25px;
+
+  &__wrapper {
+    margin: 0 110px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__header {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 190px;
+    margin-bottom: 190px;
+    min-height: 480px;
+  }
+  &__main-title {
+    margin-top: 100px;
+    margin-bottom: 25px;
+
+    font-size: $titleFontSize;
+    line-height: $titleLineHeight;
+    font-weight: inherit;
+  }
+
+  &__slogan {
+    margin-bottom: 50px;
+
+    font-size: $basefontSize * 1.25;
+    font-weight: inherit;
+    line-height: $baseLineHeight - 4;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-size: $basefontSize * 1.25;
+    font-weight: inherit;
+    line-height: $baseLineHeight - 4;
+    text-transform: uppercase;
+  }
+
+  &__logo-image {
+    position: absolute;
+    top: 32px;
+    left: 366px;
+  }
+
+  &__slim,
+  &__weight {
+    margin-bottom: 50px;
+  }
+}

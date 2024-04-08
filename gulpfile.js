@@ -1,10 +1,12 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const { watch } = require("gulp");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
+const { run } = require("node:test");
 
-function styles() {
+gulp.task("styles", function () {
   return gulp
     .src("./sass/**/styles.scss")
     .pipe(sourcemaps.init())
@@ -18,9 +20,10 @@ function styles() {
     )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./css"));
-}
+});
 
-exports.styles = styles;
 exports.watch = function () {
-  gulp.watch("./sass/**/*.scss", ["sass"]);
+  gulp.watch("./sass/*.scss", gulp.series("styles"));
+  gulp.watch("./sass/blocks/*.scss", gulp.series("styles"));
+  gulp.watch("./sass/variables/*.scss", gulp.series("styles"));
 };

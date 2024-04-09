@@ -1,0 +1,98 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.example {
+  &__title {
+    margin-bottom: 135px;
+
+    font-size: $titleFontSize;
+    line-height: $titleLineHeight;
+    font-weight: inherit;
+  }
+
+  &__wrapper {
+    margin: 0 110px;
+  }
+
+  &__description-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 720px;
+  }
+
+  &__description {
+    margin-bottom: 70px;
+
+    font-family: Arial, sans-serif;
+    font-size: $basefontSize;
+    line-height: $baseLineHeight;
+    color: $colorTextP;
+  }
+
+  &__result-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 60px;
+  }
+
+  &__result,
+  &__result-legend,
+  &__result-info {
+    transform: rotate(180deg);
+    text-align: center;
+  }
+
+  &__result {
+    margin: 0;
+    padding: 0;
+
+    width: 162px;
+    height: 80px;
+    box-sizing: border-box;
+
+    margin-right: 42px;
+    margin-bottom: 10px;
+
+    border: 1px solid;
+    border-color: #cdcdcd;
+    border-radius: 3px;
+  }
+
+  &__result-legend {
+    height: 30px;
+  }
+
+  &__result-legend-text {
+    margin: 0 8px;
+    padding-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &__result-info {
+    display: inline-block;
+
+    margin: 0;
+
+    font-size: $basefontSize * 1.875;
+    line-height: $baseLineHeight * 1.5425;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    margin-bottom: 10px;
+
+    font-size: $basefontSize * 1.25;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: inherit;
+  }
+
+  &__price-info {
+    margin-left: 67px;
+  }
+}

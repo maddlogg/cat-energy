@@ -2,6 +2,8 @@
 @import "mixins/mixins.scss";
 
 .advatanges {
+  margin-bottom: 60px;
+
   &__title {
     margin-top: 0;
     margin-left: 110px;
@@ -28,6 +30,7 @@
     width: 240px;
     height: 230px;
     padding-top: 115px;
+    margin-bottom: 15px;
 
     &::before,
     &:first-child::before {

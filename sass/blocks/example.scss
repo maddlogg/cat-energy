@@ -3,7 +3,8 @@
 
 .example {
   &__title {
-    margin-bottom: 135px;
+    margin-bottom: 60px;
+    margin-left: 110px;
 
     font-size: $titleFontSize;
     line-height: $titleLineHeight;
@@ -11,17 +12,23 @@
   }
 
   &__wrapper {
-    margin: 0 110px;
+    display: flex;
   }
 
   &__description-wrapper {
     display: flex;
     flex-direction: column;
 
+    padding-left: 110px;
+    padding-right: 175px;
+
     max-width: 720px;
+
+    background-color: $colorAddBg;
   }
 
   &__description {
+    margin-top: 75px;
     margin-bottom: 70px;
 
     font-family: Arial, sans-serif;
@@ -94,5 +101,58 @@
 
   &__price-info {
     margin-left: 67px;
+  }
+
+  &__slider-wrapper {
+    display: flex;
+
+    width: 50%;
+    min-height: 460px;
+
+    position: relative;
+
+    background-color: $colorAddBg;
+  }
+
+  &__before,
+  &__after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__before {
+    background-color: $colorAddBg;
+  }
+
+  &__after {
+    display: none;
+
+    background-color: $colorAfterBg;
+  }
+
+  &__before-image,
+  &__after-image {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    z-index: 2;
+
+    transform: translateX(-50%);
+  }
+
+  &__slider {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    z-index: 3;
+
+    margin: auto;
+
+    transform: translateX(-50%);
   }
 }

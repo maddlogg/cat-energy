@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=f3c727af-e229-481e-b7a6-207cbeefda3f&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="/js/map.js"></script>
     <title>Cat Energy</title>
   </head>
   <body>
@@ -193,7 +198,7 @@
             <p class="info__city">Санкт-Петербург</p>
           </div>
         </div>
-        <div class="contacts__map">
+        <div class="contacts__map" id="map">
           <img
             class="contacts__map-image"
             src="#"

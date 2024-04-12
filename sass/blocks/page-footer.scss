@@ -1,0 +1,23 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.page-footer {
+  min-height: 150px;
+
+  background-color: $colorAddBg;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    margin: auto 110px;
+    min-height: 150px;
+    height: 100%;
+  }
+
+  &__logo,
+  &__social,
+  &__copyright {
+    margin: auto 0;
+  }
+}

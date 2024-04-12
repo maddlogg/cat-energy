@@ -1,0 +1,40 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 570px;
+  height: 201px;
+
+  padding: 50px 70px 60px 75px;
+
+  background-color: $colorMainBg;
+
+  &__title {
+    margin: 0;
+    margin-right: 95px;
+
+    font-size: $basefontSize * 1.25;
+    line-height: $baseLineHeight * 1.25;
+    font-weight: inherit;
+    text-transform: uppercase;
+  }
+
+  &__address {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: $basefontSize;
+    line-height: $baseLineHeight;
+  }
+
+  &__street {
+    margin: 0;
+    margin-bottom: 19px;
+  }
+
+  &__city {
+    margin: 0;
+  }
+}

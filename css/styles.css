@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  margin: auto;
+  margin: 0 auto;
   max-width: 1440px;
   font-family: "Oswald", Arial, sans-serif;
   -webkit-box-sizing: border-box;
@@ -517,8 +517,113 @@ body ul {
   text-transform: uppercase;
 }
 
+.contacts__wrapper {
+  position: relative;
+}
+.contacts__info {
+  position: absolute;
+  top: 95px;
+  left: 110px;
+  z-index: 1;
+}
 .contacts__map {
   width: 100%;
-  min-height: 400px;
+  height: 400px;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 570px;
+  height: 201px;
+  padding: 50px 70px 60px 75px;
+  background-color: #ffffff;
+}
+.info__title {
+  margin: 0;
+  margin-right: 95px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: inherit;
+  text-transform: uppercase;
+}
+.info__address {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.info__street {
+  margin: 0;
+  margin-bottom: 19px;
+}
+.info__city {
+  margin: 0;
+}
+
+.page-footer {
+  min-height: 150px;
+  background-color: #f2f2f2;
+}
+.page-footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto 110px;
+  min-height: 150px;
+  height: 100%;
+}
+.page-footer__logo, .page-footer__social, .page-footer__copyright {
+  margin: auto 0;
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.social__item {
+  margin-right: 28px;
+  margin-bottom: 10px;
+}
+.social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 28px;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.copyright__text {
+  margin: auto;
+  margin-right: 22px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: inherit;
+  color: #444444;
 }
 /*# sourceMappingURL=styles.css.map */

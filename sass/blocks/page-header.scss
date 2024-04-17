@@ -1,22 +1,39 @@
 .page-header {
   position: relative;
 
-  display: flex;
-  justify-content: space-between;
+  min-height: 77px;
+  max-height: 264px;
 
-  min-height: 70px;
-  padding: 50px 110px 0;
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    width: 50%;
-    height: 700px;
+  @media (min-width: $tabletWidth) {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
 
-    background: url(/img/index-background-desktop.jpg.jpg) 50% no-repeat;
-    background-position: top right;
+      padding: 24px 30px;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 720px;
+      height: 696px;
+
+      background: url(/img/index-background-desktop.jpg.jpg) 50% no-repeat;
+    }
+
+    &__wrapper {
+      padding: 50px 110px 0;
+    }
   }
 }

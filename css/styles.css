@@ -114,7 +114,6 @@ body ul {
     display: none;
   }
 }
-
 .site-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,63 +190,51 @@ body ul {
   }
 }
 
-.programms {
-  min-height: 1055px;
-  margin-bottom: 25px;
+@media (min-width: 320px) {
+  .programms {
+    min-height: 1055px;
+    min-width: 320px;
+    margin-bottom: 25px;
+  }
+  .programms__wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+  .programms__header {
+    min-height: 480px;
+    background: url(/img/index-background-mobile.jpg) top center no-repeat;
+    background-size: contain;
+  }
+  .programms__main-title {
+    padding-top: 25px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: inherit;
+    text-align: center;
+  }
+  .programms__slogan {
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: inherit;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  .programms__link {
+    font-size: 20px;
+    font-weight: inherit;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  .programms__logo-image {
+    position: absolute;
+    top: 32px;
+    left: 366px;
+  }
+  .programms__slim, .programms__weight {
+    margin-bottom: 50px;
+  }
 }
-.programms__wrapper {
-  margin: 0 110px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.programms__header {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-left: 190px;
-  margin-bottom: 190px;
-  min-height: 480px;
-}
-.programms__main-title {
-  margin-top: 100px;
-  margin-bottom: 25px;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: inherit;
-}
-.programms__slogan {
-  margin-bottom: 50px;
-  font-size: 20px;
-  font-weight: inherit;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-.programms__link {
-  font-size: 20px;
-  font-weight: inherit;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-.programms__logo-image {
-  position: absolute;
-  top: 32px;
-  left: 366px;
-}
-.programms__slim, .programms__weight {
-  margin-bottom: 50px;
-}
-
 .slim {
   position: relative;
   padding: 40px 50px 55px 50px;

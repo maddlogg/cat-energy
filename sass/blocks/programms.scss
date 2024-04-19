@@ -1,60 +1,75 @@
 @import "./../variables/variables.scss";
+@import "mixins/mixins.scss";
 
-.programms {
-  min-height: 1055px;
-  margin-bottom: 25px;
-
-  &__wrapper {
-    margin: 0 110px;
-
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  &__header {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-
-    margin-left: 190px;
-    margin-bottom: 190px;
-    min-height: 480px;
-  }
-  &__main-title {
-    margin-top: 100px;
+@media (min-width: 320px) {
+  .programms {
+    min-height: 1055px;
+    min-width: 320px;
     margin-bottom: 25px;
 
-    font-size: $titleFontSize;
-    line-height: $titleLineHeight;
-    font-weight: inherit;
-  }
+    &__wrapper {
+      // margin: 0 110px;
 
-  &__slogan {
-    margin-bottom: 50px;
+      // display: flex;
+      // justify-content: space-between;
+      // flex-wrap: wrap;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
 
-    font-size: $basefontSize * 1.25;
-    font-weight: inherit;
-    line-height: $baseLineHeight - 4;
-    text-transform: uppercase;
-  }
+    &__header {
+      // position: relative;
 
-  &__link {
-    font-size: $basefontSize * 1.25;
-    font-weight: inherit;
-    line-height: $baseLineHeight - 4;
-    text-transform: uppercase;
-  }
+      // display: flex;
+      // flex-direction: column;
 
-  &__logo-image {
-    position: absolute;
-    top: 32px;
-    left: 366px;
-  }
+      // margin-left: 190px;
+      // margin-bottom: 190px;
+      min-height: 480px;
 
-  &__slim,
-  &__weight {
-    margin-bottom: 50px;
+      background: url(/img/index-background-mobile.jpg) top center no-repeat;
+      background-size: contain;
+    }
+    &__main-title {
+      // margin-top: 100px;
+      // margin-bottom: 25px;
+
+      // font-size: $titleFontSize;
+      // line-height: $titleLineHeight;
+      padding-top: 25px;
+
+      font-size: $basefontSize * 2.25;
+      line-height: $baseLineHeight * 1.5;
+      font-weight: inherit;
+      text-align: center;
+    }
+
+    &__slogan {
+      margin-bottom: 50px;
+
+      font-size: $basefontSize * 1.25;
+      font-weight: inherit;
+      line-height: $baseLineHeight - 4;
+      text-transform: uppercase;
+    }
+
+    &__link {
+      font-size: $basefontSize * 1.25;
+      font-weight: inherit;
+      line-height: $baseLineHeight - 4;
+      text-transform: uppercase;
+    }
+
+    &__logo-image {
+      position: absolute;
+      top: 32px;
+      left: 366px;
+    }
+
+    &__slim,
+    &__weight {
+      margin-bottom: 50px;
+    }
   }
 }

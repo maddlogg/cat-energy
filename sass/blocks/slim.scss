@@ -3,36 +3,86 @@
 .slim {
   position: relative;
 
-  padding: 40px 50px 55px 50px;
+  padding: 22px 35px 22px 20px;
 
   min-width: 280px;
   min-height: 266px;
-  max-width: 570px;
 
   background-color: $colorAddBg;
 
   &__title {
-    margin-top: 35px;
-    margin-bottom: 70px;
+    margin-top: 13px;
+    margin-left: 70px;
+    margin-bottom: 30px;
 
-    font-size: $titleFontSizeSmall;
+    font-size: $titleFontSizeSmall - 12;
     line-height: $titleLineHeightSmall;
     font-weight: 400;
 
     text-transform: uppercase;
-    text-align: center;
   }
 
   &__description {
+    padding-bottom: 22px;
+
     color: $colorTextP;
 
-    font-size: $basefontSize;
-    line-height: $baseLineHeight;
+    font-size: $basefontSize - 2;
+    line-height: $baseLineHeight - 6;
     font-family: Arial, sans-serif;
     font-weight: 400;
+
+    border-bottom: 1px solid;
+    border-color: $colorBorderProgramm;
   }
 
   &__catalog-link {
+    font-size: $basefontSize;
+    line-height: $basefontSize - 8;
     text-transform: uppercase;
+  }
+
+  @media (min-width: $tabletWidth) {
+    padding: 70px 25px 55px 52px;
+
+    max-width: 708px;
+    min-height: 370px;
+
+    &__title {
+      margin-top: 0px;
+      margin-left: 0px;
+
+      font-size: $titleFontSizeSmall;
+    }
+
+    &__description {
+      padding-bottom: 0;
+      margin-bottom: 60px;
+
+      font-size: $basefontSize;
+      line-height: $baseLineHeight;
+
+      border: none;
+    }
+
+    &__catalog-link {
+      font-size: $basefontSize * 1.25;
+      line-height: $baseLineHeight - 4;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    max-width: 570px;
+    padding: 40px 30px 55px 50px;
+
+    &__title {
+      margin-bottom: 70px;
+
+      text-align: center;
+    }
+
+    &__description {
+      margin-bottom: 40px;
+    }
   }
 }

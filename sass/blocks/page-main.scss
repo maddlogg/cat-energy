@@ -1,0 +1,11 @@
+@import "./../variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.page-main {
+  background: url(/img/index-background-mobile.jpg) top center no-repeat;
+  background-size: 100% auto;
+
+  @media (min-width: $tabletWidth) {
+    background: none;
+  }
+}

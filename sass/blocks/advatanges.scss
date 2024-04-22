@@ -2,35 +2,34 @@
 @import "mixins/mixins.scss";
 
 .advatanges {
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
+  margin-bottom: 42px;
 
   &__title {
-    margin-top: 0;
-    margin-left: 110px;
-    margin-bottom: 70px;
+    // margin-top: 0;
+    // margin-bottom: 70px;
+    margin-bottom: 40px;
 
-    font-size: $titleFontSize;
+    font-size: $titleFontSize * 0.6;
     font-weight: inherit;
     line-height: $titleLineHeight;
   }
 
   &__wrapper {
-    margin: 0 110px;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 0 20px;
   }
 
   &__item {
     position: relative;
 
-    width: 240px;
-    height: 230px;
-    padding-top: 115px;
-    margin-bottom: 15px;
+    // width: 240px;
+    // height: 230px;
+    min-width: 280px;
+    min-height: 60px;
+    padding-left: 80px;
+    // padding-top: 115px;
+    // margin-bottom: 15px;
+    margin-bottom: 20px;
 
     &::before,
     &:first-child::before {
@@ -52,27 +51,6 @@
       @include list-item-before;
       background-image: url(/img/advantage-4.png);
     }
-
-    &::after,
-    &:first-child::after {
-      @include list-item-after;
-      content: "1";
-    }
-
-    &:nth-child(2)::after {
-      @include list-item-after;
-      content: "2";
-    }
-
-    &:nth-child(3)::after {
-      @include list-item-after;
-      content: "3";
-    }
-
-    &:nth-child(4)::after {
-      @include list-item-after;
-      content: "4";
-    }
   }
 
   &__description {
@@ -80,7 +58,63 @@
     margin: 0;
 
     font-family: Arial, sans-serif;
-    font-size: $basefontSize;
-    line-height: $baseLineHeight;
+    font-size: $basefontSize - 2;
+    line-height: $baseLineHeight * 0.75;
+  }
+
+  @media (min-width: $tabletWidth) {
+    margin-bottom: 50px;
+
+    &__title {
+      margin-top: 50px;
+      margin-bottom: 75px;
+
+      font-size: $titleFontSize;
+    }
+
+    &__wrapper {
+      padding: 0 30px;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 250px;
+      min-width: auto;
+      min-height: 230px;
+      padding-top: 115px;
+      padding-left: 0;
+      margin-bottom: 89px;
+
+      &::after,
+      &:first-child::after {
+        @include list-item-after;
+        content: "1";
+      }
+
+      &:nth-child(2)::after {
+        @include list-item-after;
+        content: "2";
+      }
+
+      &:nth-child(3)::after {
+        @include list-item-after;
+        content: "3";
+      }
+
+      &:nth-child(4)::after {
+        @include list-item-after;
+        content: "4";
+      }
+    }
+
+    &__description {
+      font-size: $basefontSize;
+      line-height: $baseLineHeight;
+    }
   }
 }

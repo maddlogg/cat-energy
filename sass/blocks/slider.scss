@@ -1,0 +1,14 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.slider {
+  &__before-toggle,
+  &__after-toggle {
+    border-bottom: 1px dotted;
+    border-bottom-color: $colorBorderToggles;
+
+    font-size: $basefontSize * 1.25;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}

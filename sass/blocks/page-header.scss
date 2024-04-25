@@ -1,0 +1,42 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.page-header {
+  position: relative;
+
+  min-height: 77px;
+  max-height: 264px;
+
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  @media (min-width: $tabletWidth) {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 24px 30px;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 720px;
+      height: 696px;
+
+      background: url(/img/index-background-desktop.jpg.jpg) 50% no-repeat;
+    }
+
+    &__wrapper {
+      padding: 50px 110px 0;
+    }
+  }
+}

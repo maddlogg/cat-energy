@@ -1,0 +1,137 @@
+@import "./../variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.programms {
+  min-height: 1055px;
+  min-width: 320px;
+  margin-bottom: 25px;
+
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  &__header {
+    width: 100%;
+    min-height: 480px;
+
+    text-align: center;
+  }
+  &__main-title {
+    margin-bottom: 25px;
+    padding-top: 25px;
+
+    font-size: $basefontSize * 2.25;
+    line-height: $baseLineHeight * 1.5;
+    font-weight: inherit;
+    color: $colorMainBg;
+  }
+
+  &__slogan {
+    display: block;
+    margin-bottom: 30px;
+
+    font-size: $basefontSize - 2;
+    font-weight: inherit;
+    line-height: $baseLineHeight - 10;
+    text-transform: uppercase;
+    color: $colorMainBg;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    font-size: $basefontSize - 2;
+    font-weight: inherit;
+    line-height: $baseLineHeight - 6;
+    text-transform: uppercase;
+  }
+
+  &__slim,
+  &__weight {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tabletWidth) {
+    margin-bottom: 45px;
+
+    &__wrapper {
+      padding: 0 30px;
+    }
+
+    &__flex-wrapper {
+      width: 100%;
+    }
+
+    &__header {
+      min-height: 850px;
+      margin-left: 90px;
+
+      text-align: left;
+    }
+
+    &__main-title {
+      margin-bottom: 40px;
+
+      font-size: $titleFontSize;
+      line-height: $titleLineHeight;
+      color: $colorTextMain;
+    }
+
+    &__slogan {
+      margin-bottom: 47px;
+
+      font-size: $basefontSize * 1.25;
+      line-height: $baseLineHeight - 4;
+      color: $colorTextMain;
+    }
+
+    &__link {
+      display: block;
+      min-width: 245px;
+      min-height: 52px;
+      max-width: 280px;
+
+      padding: 15px 0;
+
+      font-size: $basefontSize * 1.25;
+      line-height: $baseLineHeight - 4;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    margin-bottom: 80px;
+
+    &__wrapper {
+      padding: 0 110px;
+    }
+
+    &__flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__header {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+
+      min-height: 395px;
+      margin-left: 80px;
+      margin-bottom: 268px;
+    }
+
+    &__logo-image {
+      position: absolute;
+      top: 32px;
+      left: 366px;
+    }
+  }
+}

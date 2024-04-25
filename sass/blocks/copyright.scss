@@ -1,0 +1,17 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+
+  &__text {
+    margin: auto;
+    margin-right: 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: $basefontSize;
+    font-weight: inherit;
+    color: $colorTextP;
+  }
+}

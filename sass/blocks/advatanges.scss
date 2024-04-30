@@ -2,7 +2,6 @@
 @import "mixins/mixins.scss";
 
 .advatanges {
-  // margin-bottom: 60px;
   margin-bottom: 42px;
 
   &__title {
@@ -22,12 +21,9 @@
   &__item {
     position: relative;
 
-    // width: 240px;
-    // height: 230px;
     min-width: 280px;
     min-height: 60px;
     padding-left: 80px;
-    // padding-top: 115px;
     // margin-bottom: 15px;
     margin-bottom: 20px;
 
@@ -63,7 +59,10 @@
   }
 
   @media (min-width: $tabletWidth) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    border-bottom: 1px solid;
+    border-color: $colorBorderNav;
 
     &__title {
       margin-top: 50px;
@@ -78,17 +77,24 @@
 
     &__list {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
     }
 
     &__item {
-      width: 250px;
+      width: 245px;
       min-width: auto;
       min-height: 230px;
       padding-top: 115px;
       padding-left: 0;
       margin-bottom: 89px;
+
+      &:nth-child(2n-1) {
+        margin-right: 110px;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 80px;
+      }
 
       &::after,
       &:first-child::after {
@@ -115,6 +121,34 @@
     &__description {
       font-size: $basefontSize;
       line-height: $baseLineHeight;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    margin-bottom: 60px;
+
+    border-bottom: none;
+
+    &__title {
+      margin-bottom: 70px;
+    }
+
+    &__wrapper {
+      padding: 0 110px;
+    }
+
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__item {
+      &:nth-child(2n-1) {
+        margin-right: 0;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
   }
 }

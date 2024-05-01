@@ -32,9 +32,55 @@
     border-color: $colorBorder;
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
-      background-color: $colorBg;
       width: 50%;
       height: 6px;
       border-radius: 25px;
-  }}
+      background-color: $colorBg;
+    }
+  }
+
+  @media (min-width: $tabletWidth) {
+    &__before-toggle,
+    &__after-toggle {
+      padding-bottom: 5px;
+
+      border-bottom: 1px dotted;
+      border-bottom-color: $colorBorderToggles;
+  
+      font-size: $basefontSize * 1.25;
+    }
+
+    &__input {
+      margin: auto 23px;
+      padding: 0;
+      width: 60%;
+      height: 7px;
+      border: none;
+      background-color: $colorInputBg;
+      &::-webkit-slider-thumb {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 12px solid;
+        border-color: $colorMainBg;
+        box-sizing: border-box;
+        // background-color: $colorMainBg;
+        box-shadow: 0 0 0 1px $colorBorder;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   z-index: 5;
+        //   width: 8px;
+        //   height: 8px;
+        //   border-radius: 50%;
+        //   background-color: $colorBg;
+        // }
+      }
+    }
+  }
 }
+
+

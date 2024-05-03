@@ -4,19 +4,20 @@
 .info {
   display: flex;
   justify-content: space-between;
-  width: 570px;
-  height: 201px;
 
-  padding: 50px 70px 60px 75px;
+  min-width: 280px;
+  min-height: 114px;
+
+  padding-top: 30px;
 
   background-color: $colorMainBg;
 
   &__title {
     margin: 0;
-    margin-right: 95px;
+    margin-right: 18px;
 
-    font-size: $basefontSize * 1.25;
-    line-height: $baseLineHeight * 1.25;
+    font-size: $basefontSize;
+    line-height: 20px;
     font-weight: inherit;
     text-transform: uppercase;
   }
@@ -25,16 +26,61 @@
     margin: 0;
 
     font-family: Arial, sans-serif;
-    font-size: $basefontSize;
-    line-height: $baseLineHeight;
+    font-size: $basefontSize * 0.875;
+    line-height: 20px;
+    color: $colorTextP;
   }
 
   &__street {
     margin: 0;
-    margin-bottom: 19px;
   }
 
   &__city {
     margin: 0;
+  }
+
+  @media (min-width: $tabletWidth) {
+    min-height: 200px;
+
+    padding-top: 66px;
+    padding-left: 40px;
+    padding-right: 42px;
+
+    &__title {
+      font-size: $basefontSize * 1.25;
+      line-height: 25px;
+    }
+
+    &__address {
+      font-size: $basefontSize;
+      text-align: right;
+    }
+
+    &__street {
+      margin-bottom: 22px;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    width: 570px;
+    height: 201px;
+
+    padding: 50px 70px 60px 75px;
+
+    &__title {
+      margin-right: 95px;
+  
+      font-size: $basefontSize * 1.25;
+      line-height: $baseLineHeight * 1.25;
+    }
+
+    &__address {
+      font-size: $basefontSize;
+      line-height: $baseLineHeight;
+    }
+
+    &__street {
+      margin-bottom: 19px;
+    }
   }
 }

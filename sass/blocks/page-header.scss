@@ -4,8 +4,7 @@
 .page-header {
   position: relative;
 
-  min-height: 77px;
-  max-height: 264px;
+  min-height: 264px;
 
   &__wrapper {
     margin: 0 auto;
@@ -14,6 +13,8 @@
   }
 
   @media (min-width: $tabletWidth) {
+    min-height: 77px;
+
     &__wrapper {
       display: flex;
       justify-content: space-between;

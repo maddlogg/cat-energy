@@ -11,6 +11,9 @@
     min-height: 66px;
     &:first-child {
       margin-left: 0;
+
+      border-top: 1px solid;
+      border-top-color: $colorBorderNav;
     }
     padding: 23px 0;
 

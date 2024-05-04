@@ -23,6 +23,7 @@ body {
           box-sizing: border-box;
   color: #111111;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 body a {
   text-decoration: none;
@@ -215,6 +216,7 @@ body ul {
   width: 100%;
   min-height: 480px;
   text-align: center;
+  overflow-x: hidden;
 }
 .programms__main-title {
   margin-bottom: 25px;
@@ -257,7 +259,7 @@ body ul {
   }
   .programms__header {
     min-height: 850px;
-    margin-left: 90px;
+    padding-left: 90px;
     text-align: left;
   }
   .programms__main-title {
@@ -358,7 +360,6 @@ body ul {
 @media (min-width: 768px) {
   .slim {
     padding: 70px 25px 55px 52px;
-    max-width: 708px;
     min-height: 370px;
   }
   .slim__title {
@@ -426,7 +427,6 @@ body ul {
 @media (min-width: 768px) {
   .weight {
     padding: 70px 25px 55px 52px;
-    max-width: 708px;
     min-height: 370px;
   }
   .weight__title {
@@ -776,6 +776,7 @@ body ul {
   z-index: 1;
   width: 100%;
   height: 240px;
+  overflow-x: hidden;
 }
 .example__before {
   display: block;
@@ -1051,6 +1052,7 @@ body ul {
   }
   .contacts__map {
     height: 396px;
+    overflow-x: hidden;
   }
 }
 @media (min-width: 1440px) {
@@ -1151,35 +1153,69 @@ body ul {
 }
 
 .page-footer {
-  min-height: 150px;
+  min-width: 320px;
+  min-height: 236px;
+  text-align: center;
   background-color: #f2f2f2;
 }
 .page-footer__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: auto 110px;
-  min-height: 150px;
+  padding: 0 20px;
   height: 100%;
 }
-.page-footer__logo, .page-footer__social, .page-footer__copyright {
-  margin: auto 0;
+.page-footer__logo {
+  margin-top: 39px;
+  margin-bottom: 31px;
+}
+.page-footer__social {
+  padding-top: 21px;
+  padding-bottom: 11px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #d9d9d9;
+}
+@media (min-width: 768px) {
+  .page-footer {
+    min-height: 150px;
+    text-align: left;
+  }
+  .page-footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto 0;
+    padding: 0 30px;
+    min-height: 150px;
+  }
+  .page-footer__logo, .page-footer__social, .page-footer__copyright {
+    margin: auto 0;
+  }
+  .page-footer__social {
+    padding: 0;
+    border: none;
+  }
+}
+@media (min-width: 1440px) {
+  .page-footer__wrapper {
+    padding: 0 110px;
+  }
 }
 
 .social__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .social__item {
-  margin-right: 28px;
+  width: 50px;
+  margin-right: 10px;
   margin-bottom: 10px;
+  text-align: center;
 }
 .social__link {
   display: -webkit-box;
@@ -1191,8 +1227,35 @@ body ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30px;
-  height: 28px;
+  margin: 0 auto;
+  width: 24px;
+  height: 19px;
+}
+.social__svg {
+  display: none;
+}
+@media (min-width: 768px) {
+  .social__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .social__item {
+    width: 60px;
+    margin: auto;
+    margin-right: 0;
+  }
+  .social__link {
+    width: 30px;
+    height: 28px;
+    margin: auto auto;
+  }
+  .social__svg-mobile {
+    display: none;
+  }
+  .social__svg {
+    display: block;
+  }
 }
 
 .copyright {
@@ -1202,13 +1265,33 @@ body ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 22px;
 }
 .copyright__text {
-  margin: auto;
-  margin-right: 22px;
+  margin: auto 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
+  line-height: 16px;
   font-weight: inherit;
   color: #444444;
+}
+@media (min-width: 768px) {
+  .copyright {
+    padding-top: 0;
+  }
+  .copyright__text {
+    margin-right: 22px;
+  }
+  .copyright__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

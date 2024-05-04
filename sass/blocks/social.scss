@@ -4,12 +4,16 @@
 .social {
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__item {
-    margin-right: 28px;
+    width: 50px;
+
+    margin-right: 10px;
     margin-bottom: 10px;
+
+    text-align: center;
   }
 
   &__link {
@@ -17,7 +21,40 @@
     justify-content: center;
     align-items: center;
 
-    width: 30px;
-    height: 28px;
+    margin: 0 auto;
+
+    width: 24px;
+    height: 19px;
+  }
+
+  &__svg {
+    display: none;
+  }
+
+  @media (min-width: $tabletWidth) {
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 60px;
+      margin: auto;
+      margin-right: 0;
+    }
+
+    &__link {
+      width: 30px;
+      height: 28px;
+
+      margin: auto auto;
+    }
+
+    &__svg-mobile {
+      display: none;
+    }
+
+    &__svg {
+      display: block;
+    }
   }
 }

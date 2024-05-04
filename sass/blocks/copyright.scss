@@ -5,13 +5,30 @@
   display: flex;
   justify-content: space-between;
 
+  padding-top: 22px;
+
   &__text {
-    margin: auto;
-    margin-right: 22px;
+    margin: auto 0;
+    // margin-right: 22px;
 
     font-family: Arial, sans-serif;
     font-size: $basefontSize;
+    line-height: 16px;
     font-weight: inherit;
     color: $colorTextP;
+  }
+
+  @media (min-width: $tabletWidth) {
+    padding-top: 0;
+
+    &__text {
+      margin-right: 22px;
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

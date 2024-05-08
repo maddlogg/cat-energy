@@ -55,6 +55,10 @@
 
     &__svg {
       display: block;
+
+      &:hover {
+        filter: invert(1);
+      }
     }
   }
 }

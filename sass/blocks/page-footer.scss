@@ -4,7 +4,9 @@
 .page-footer {
   min-width: 320px;
   min-height: 236px;
-  
+
+  padding-top: 39px;
+
   text-align: center;
 
   background-color: $colorAddBg;
@@ -15,8 +17,11 @@
   }
 
   &__logo {
-    margin-top: 39px;
+    display: block;
+
     margin-bottom: 31px;
+
+    cursor: pointer;
   }
 
   &__social {
@@ -31,16 +36,28 @@
   @media (min-width: $tabletWidth) {
     min-height: 150px;
 
+    padding-top: 0;
+
     text-align: left;
 
     &__wrapper {
       display: flex;
       justify-content: space-between;
-  
+
       margin: auto 0;
       padding: 0 30px;
 
       min-height: 150px;
+    }
+
+    &__logo {
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
     }
 
     &__logo,
@@ -51,7 +68,7 @@
 
     &__social {
       padding: 0;
-  
+
       border: none;
     }
   }

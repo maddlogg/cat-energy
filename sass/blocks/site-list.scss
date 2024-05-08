@@ -54,6 +54,10 @@
         border-bottom: 2px solid;
         border-bottom-color: $colorBg;
       }
+
+      &:first-child {
+        border-top: none;
+      }
     }
 
     &__link {

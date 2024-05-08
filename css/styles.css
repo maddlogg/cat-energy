@@ -65,6 +65,28 @@ body ul {
   padding: 0 20px;
   width: 100%;
 }
+.page-header__logo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 66px;
+}
+.page-header__logo-mobile {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 @media (min-width: 768px) {
   .page-header {
     min-height: 77px;
@@ -77,6 +99,24 @@ body ul {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 24px 30px;
+  }
+  .page-header__logo {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  .page-header__logo:hover {
+    opacity: 0.8;
+  }
+  .page-header__logo:active {
+    opacity: 0.6;
+  }
+  .page-header__logo img {
+    width: 178px;
+    height: 58px;
+  }
+  .page-header__logo-name-mobile {
+    display: none;
   }
 }
 @media (min-width: 1440px) {
@@ -92,6 +132,10 @@ body ul {
   }
   .page-header__wrapper {
     padding: 50px 110px 0;
+  }
+  .page-header__logo img {
+    width: 202px;
+    height: 59px;
   }
 }
 
@@ -179,6 +223,9 @@ body ul {
   .site-list__item--active {
     border-bottom: 2px solid;
     border-bottom-color: #68b738;
+  }
+  .site-list__item:first-child {
+    border-top: none;
   }
   .site-list__link {
     font-size: 18px;
@@ -1165,6 +1212,7 @@ body ul {
 .page-footer {
   min-width: 320px;
   min-height: 236px;
+  padding-top: 39px;
   text-align: center;
   background-color: #f2f2f2;
 }
@@ -1173,8 +1221,9 @@ body ul {
   height: 100%;
 }
 .page-footer__logo {
-  margin-top: 39px;
+  display: block;
   margin-bottom: 31px;
+  cursor: pointer;
 }
 .page-footer__social {
   padding-top: 21px;
@@ -1186,6 +1235,7 @@ body ul {
 @media (min-width: 768px) {
   .page-footer {
     min-height: 150px;
+    padding-top: 0;
     text-align: left;
   }
   .page-footer__wrapper {
@@ -1198,6 +1248,12 @@ body ul {
     margin: auto 0;
     padding: 0 30px;
     min-height: 150px;
+  }
+  .page-footer__logo:hover {
+    opacity: 0.8;
+  }
+  .page-footer__logo:active {
+    opacity: 0.6;
   }
   .page-footer__logo, .page-footer__social, .page-footer__copyright {
     margin: auto 0;
@@ -1265,6 +1321,10 @@ body ul {
   }
   .social__svg {
     display: block;
+  }
+  .social__svg:hover {
+    -webkit-filter: invert(1);
+            filter: invert(1);
   }
 }
 

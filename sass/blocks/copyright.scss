@@ -2,15 +2,17 @@
 @import "mixins/mixins.scss";
 
 .copyright {
-  display: flex;
-  justify-content: space-between;
-
   padding-top: 22px;
 
-  &__text {
-    margin: auto 0;
-    // margin-right: 22px;
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    margin: auto 0;
+  }
+
+  &__link-text {
     font-family: Arial, sans-serif;
     font-size: $basefontSize;
     line-height: 16px;
@@ -18,17 +20,37 @@
     color: $colorTextP;
   }
 
+  &__link-logo {
+    width: 27px;
+    height: 34px;
+
+    mask-image: url(/img/htmlacademy.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: auto;
+
+    background-color: $colorSvg;
+  }
+
   @media (min-width: $tabletWidth) {
     padding-top: 0;
 
-    &__text {
-      margin-right: 22px;
+    &__link {
+      &:active {
+        opacity: 0.3;
+      }
+
+      &:hover .copyright__link-logo {
+        background-color: $colorBg;
+      }
+
+      &:active .copyright__link-logo {
+        opacity: 0.3;
+      }
     }
 
-    &__link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    &__link-text {
+      margin-right: 22px;
     }
   }
 }

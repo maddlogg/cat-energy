@@ -47,6 +47,10 @@
       height: 28px;
 
       margin: auto auto;
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
     &__svg-mobile {
@@ -55,9 +59,44 @@
 
     &__svg {
       display: block;
+    }
+
+    &__link--vk {
+      mask-image: url(/img/vk.svg);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: auto;
+
+      background-color: $colorSvg;
 
       &:hover {
-        filter: invert(1);
+        background-color: $colorBg;
+      }
+    }
+
+    &__link--inst {
+      mask-image: url(/img/insta.svg);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: auto;
+
+      background-color: $colorSvg;
+
+      &:hover {
+        background-color: $colorBg;
+      }
+    }
+
+    &__link--fb {
+      mask-image: url(/img/fb.svg);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: auto;
+
+      background-color: $colorSvg;
+
+      &:hover {
+        background-color: $colorBg;
       }
     }
   }

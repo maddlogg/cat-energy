@@ -62,6 +62,14 @@ body {
 
   color: $colorTextNav;
   background-color: $colorBg;
+
+  &:hover {
+    background-color: $colorButtonHvr;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @import "blocks/page-header.scss";

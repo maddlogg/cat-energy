@@ -164,37 +164,46 @@
             </div>
             <div class="example__slider-wrapper">
               <div class="example__before">
-                <img
-                  class="example__before-mobile-image"
-                  src="img/before-mobile.png"
-                  width="311"
-                  height="232"
-                  alt="Фото кота до использования программы"
-                />
-                <img
-                  class="example__before-image"
-                  src="img/before-desktop.png.png"
-                  width="685"
-                  height="510"
-                  alt="Фото кота до использования программы"
-                />
+                <div class="example__before-wrapper">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="/img/before-desktop.png.png"
+                    />
+                    <img
+                      class="example__before-image"
+                      src="img/before-mobile.png"
+                      width="311"
+                      height="232"
+                      alt="Фото кота до использования программы"
+                    />
+                  </picture>
+                </div>
               </div>
               <div class="example__after">
-                <img
-                  class="example__after-image"
-                  src="img/after-desktop.png.png"
-                  width="600"
-                  height="520"
-                  alt="Фото кота после использования программы"
-                />
+                <div class="example__after-wrapper">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="/img/after-desktop.png.png"
+                    />
+                    <img
+                      class="example__after-image"
+                      src="img/after-mobile.png"
+                      width="251"
+                      height="240"
+                      alt="Фото кота после использования программы"
+                    />
+                  </picture>
+                </div>
               </div>
               <div class="example__slider slider">
-                <!-- <label class="slider__before-toggle" for="before-after"
-                  >Было</label
-                > -->
                 <input
                   class="slider__input"
                   type="range"
+                  min="0"
+                  max="100"
+                  value="50"
                   id="before-after"
                   name="before-after"
                 />
@@ -295,5 +304,6 @@
         </div>
       </div>
     </footer>
+    <script src="/js/slider.js"></script>
   </body>
 </html>

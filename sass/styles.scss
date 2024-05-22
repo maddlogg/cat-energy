@@ -12,11 +12,17 @@ html {
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
+
   box-sizing: inherit;
+
+  // border: 1px solid red;
 }
 
 body {
   margin: 0 auto;
+  width: 100%;
   max-width: 1440px;
   min-width: 320px;
 

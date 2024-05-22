@@ -10,12 +10,15 @@ html {
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
 body {
   margin: 0 auto;
+  width: 100%;
   max-width: 1440px;
   min-width: 320px;
   font-family: "Oswald", Arial, sans-serif;
@@ -352,7 +355,7 @@ body ul {
 @media (min-width: 1440px) {
   .programms {
     min-height: 1005px;
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
   .programms__wrapper {
     padding: 0 110px;
@@ -712,6 +715,7 @@ body ul {
     border-bottom: none;
   }
   .advatanges__title {
+    padding-left: 3px;
     margin-bottom: 70px;
   }
   .advatanges__wrapper {
@@ -814,7 +818,7 @@ body ul {
   text-transform: uppercase;
 }
 .example__price {
-  margin-bottom: 42px;
+  margin-bottom: 36px;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -836,23 +840,41 @@ body ul {
 .example__before, .example__after {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -20px;
   z-index: 1;
   width: 100%;
   height: 240px;
+  overflow: hidden;
 }
 .example__before {
   display: block;
+  z-index: 2;
+  width: 50%;
   margin: 0 auto;
-  text-align: center;
   background-color: #f2f2f2;
 }
 .example__after {
-  display: none;
-  background-color: #eaeaea;
+  display: block;
 }
-.example__before-image, .example__after-image {
-  display: none;
+.example__before-wrapper {
+  position: relative;
+  width: 100vw;
+  min-width: 320px;
+  min-height: 240px;
+}
+.example__before-image {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.example__after-image {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 43px;
+  z-index: 2;
 }
 .example__slider {
   display: -webkit-box;
@@ -866,6 +888,16 @@ body ul {
           align-items: center;
   margin: 0 auto;
   margin-top: 240px;
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  .example__before-image {
+    left: 50%;
+    margin-left: -156px;
+  }
+  .example__after-image {
+    left: 50%;
+    margin-left: -126px;
+  }
 }
 @media (min-width: 768px) {
   .example {
@@ -886,7 +918,7 @@ body ul {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: 274px;
+    margin-bottom: 248px;
     background-color: #ffffff;
   }
   .example__description {
@@ -934,23 +966,53 @@ body ul {
   .example__slider-wrapper {
     min-height: 462px;
   }
+  .example__before-wrapper {
+    top: 170px;
+    min-height: 462px;
+    background-color: #f2f2f2;
+  }
+  .example__after-wrapper {
+    position: relative;
+    top: 169px;
+    left: 0;
+    min-height: 462px;
+    background-color: #eaeaea;
+  }
   .example__before, .example__after {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     height: 462px;
   }
-  .example__before-mobile-image {
-    display: none;
+  .example__before {
+    width: 50vw;
+    top: -169px;
+    left: 0;
+    min-height: 631px;
+    background-color: #fff;
+  }
+  .example__after {
+    top: -169px;
+    left: 0;
+    min-height: 631px;
+    background-color: transparent;
   }
   .example__before-image, .example__after-image {
-    display: block;
-    position: absolute;
-    top: -33%;
-    left: 50%;
     z-index: 2;
+  }
+  .example__before-image {
+    top: -152px;
+    left: 50%;
+    width: 685px;
+    height: 510px;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+  .example__after-image {
+    top: -169px;
+    left: 17.8385417%;
+    width: 545px;
+    height: 517px;
   }
   .example__slider {
     position: absolute;
@@ -963,12 +1025,18 @@ body ul {
             transform: translateX(-50%);
   }
 }
+@media (min-width: 769px) and (max-width: 1439px) {
+  .example__after-image {
+    left: 50%;
+    margin-left: -272.5px;
+  }
+}
 @media (min-width: 1440px) {
   .example {
     min-height: 370px;
   }
   .example__title {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
   }
   .example__wrapper {
     padding: 0 110px;
@@ -981,6 +1049,7 @@ body ul {
     max-width: 1440px;
     margin-left: -110px;
     padding: 0 110px;
+    padding-right: 0;
     background-color: #f2f2f2;
   }
   .example__description-wrapper {
@@ -990,14 +1059,15 @@ body ul {
             flex-direction: column;
     margin-bottom: 0;
     padding-top: 70px;
-    padding-right: 175px;
-    width: 50%;
+    padding-right: 107px;
+    width: 540px;
     max-width: 720px;
     background-color: #f2f2f2;
   }
   .example__description {
     margin-top: 0px;
     margin-bottom: 70px;
+    padding: 0;
   }
   .example__result-wrapper {
     -webkit-box-pack: start;
@@ -1010,21 +1080,51 @@ body ul {
   }
   .example__price {
     display: block;
+    margin-top: 0;
     margin-left: 0;
-    margin-bottom: 70px;
+    margin-bottom: 66px;
     text-align: left;
   }
   .example__price-info {
     margin-left: 67px;
   }
   .example__slider-wrapper {
-    width: 50%;
+    width: 790px;
     min-height: 460px;
   }
+  .example__before-wrapper, .example__after-wrapper {
+    top: 190px;
+  }
   .example__before, .example__after {
+    top: -190px;
+    left: 0;
     margin-left: 0;
     width: 100%;
     height: 100%;
+    min-height: 652px;
+  }
+  .example__before {
+    width: 50%;
+  }
+  .example__before-image {
+    top: -173px;
+    left: 30px;
+    width: 677px;
+    height: 499px;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  .example__after-image {
+    top: -190px;
+    left: 121px;
+  }
+  .example__slider {
+    left: 0;
+    right: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 
@@ -1114,6 +1214,26 @@ body ul {
     border-bottom-color: transparent;
   }
 }
+@media (min-width: 1440px) {
+  .slider {
+    width: 570px;
+  }
+  .slider__before-toggle {
+    width: 45px;
+    margin-right: 25px;
+    text-align: left;
+  }
+  .slider__after-toggle {
+    width: 50px;
+    margin-left: 22px;
+    text-align: right;
+  }
+  .slider__input {
+    width: 474px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 .contacts {
   min-height: 476px;
@@ -1124,6 +1244,7 @@ body ul {
   padding: 0 20px;
   width: 100%;
   min-width: 320px;
+  overflow: hidden;
 }
 .contacts__map {
   width: 100vw;

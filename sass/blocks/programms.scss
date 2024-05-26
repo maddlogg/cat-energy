@@ -74,6 +74,10 @@
       padding-left: 90px;
 
       text-align: left;
+
+      background-image: url("/img/index-can-tablet.jpg");
+      background-position: bottom center;
+      background-repeat: no-repeat;
     }
 
     &__main-title {
@@ -90,6 +94,10 @@
       font-size: $basefontSize * 1.25;
       line-height: $baseLineHeight - 4;
       color: $colorTextMain;
+    }
+
+    &__logo-image {
+      display: none;
     }
 
     &__link {
@@ -127,14 +135,23 @@
       flex-direction: column;
 
       min-height: 395px;
-      margin-left: 80px;
-      margin-bottom: 268px;
+      margin-left: 30px;
+      margin-top: 90px;
+      margin-bottom: 178px;
+
+      background: none;
+      overflow-x: visible;
     }
 
     &__logo-image {
       position: absolute;
-      top: 32px;
-      left: 366px;
+      top: -50px;
+      left: 420px;
+
+      width: 552px;
+      height: 499px;
+
+      display: block;
     }
 
     &__slim,

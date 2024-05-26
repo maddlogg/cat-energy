@@ -20,6 +20,35 @@
     font-weight: 400;
 
     text-transform: uppercase;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 25px;
+      left: 22px;
+
+      width: 50px;
+      height: 50px;
+
+      border-radius: 50%;
+
+      background-color: $colorBg;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      left: 30px;
+
+      width: 35px;
+      height: 49px;
+
+      background: url("/img/slim-icon.svg") center no-repeat;
+      background-size: 100%;
+    }
   }
 
   &__description {
@@ -37,13 +66,61 @@
   }
 
   &__catalog-link {
+    position: absolute;
+    bottom: 25px;
+
+    display: block;
+
+    margin-top: 18px;
+
     font-size: $basefontSize;
     line-height: $basefontSize - 8;
     text-transform: uppercase;
+    color: $colorTextMain;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      bottom: 2px;
+      left: 95px;
+
+      width: 17px;
+      height: 3px;
+
+      background-color: $colorProgrammPseudo;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -2px;
+      left: 112px;
+
+      width: 11px;
+      height: 11px;
+
+      border: 5px solid transparent;
+      border-left: 7px solid;
+      border-left-color: $colorProgrammPseudo;
+    }
+
+    &:hover::before {
+      width: 26px;
+    }
+
+    &:hover::after {
+      left: 121px;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $tabletWidth) {
-    padding: 70px 25px 55px 52px;
+    padding: 70px 275px 55px 52px;
 
     min-height: 370px;
 
@@ -52,6 +129,26 @@
       margin-left: 0px;
 
       font-size: $titleFontSizeSmall;
+
+      &::before {
+        top: 92px;
+        right: 60px;
+        left: auto;
+
+        width: 200px;
+        height: 200px;
+      }
+
+      &::after {
+        top: 80px;
+        right: 92px;
+        left: auto;
+
+        width: 140px;
+        height: 194px;
+
+        background-image: url("/img/slim-icon-big.svg");
+      }
     }
 
     &__description {
@@ -65,23 +162,69 @@
     }
 
     &__catalog-link {
+      bottom: 65px;
+
       font-size: $basefontSize * 1.25;
       line-height: $baseLineHeight - 4;
+
+      &::before {
+        bottom: 6px;
+        left: 125px;
+      }
+
+      &::after {
+        bottom: 2px;
+        left: 142px;
+      }
+
+      &:hover::after {
+        left: 151px;
+      }
     }
   }
 
   @media (min-width: $desktopWidth) {
     max-width: 570px;
-    padding: 40px 30px 55px 50px;
+    padding: 78px 30px 55px 50px;
 
     &__title {
       margin-bottom: 70px;
 
       text-align: center;
+
+      &::before {
+        top: 47px;
+        left: 52px;
+        right: auto;
+
+        width: 100px;
+        height: 100px;
+      }
+
+      &::after {
+        top: 41px;
+        left: 66px;
+        right: auto;
+
+        width: 70px;
+        height: 97px;
+
+        background-image: url("/img/slim-icon-desktop.svg");
+      }
     }
 
     &__description {
       margin-bottom: 40px;
+    }
+
+    &__catalog-link {
+      &::before {
+        bottom: 8px;
+      }
+
+      &::after {
+        bottom: 4px;
+      }
     }
   }
 }

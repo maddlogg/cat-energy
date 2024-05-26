@@ -33,6 +33,7 @@ body {
   color: $colorTextMain;
   background-color: $colorMainBg;
   overflow-x: hidden;
+  overflow-y: scroll;
 
   a {
     text-decoration: none;

@@ -4,6 +4,7 @@
 .slider {
   width: 100%;
   min-width: 200px;
+  margin-left: 5px;
 
   &__before-toggle,
   &__after-toggle {
@@ -24,13 +25,13 @@
     appearance: none;
     -webkit-appearance: none;
 
-    margin: auto 19px;
-    padding: 6px 4px;
+    margin: auto 18px;
+    padding: 6px 5px;
     width: 25%;
     min-width: 84px;
     height: 14px;
 
-    border-radius: 25px;
+    border-radius: 5px;
     border: 1px solid;
     border-color: $colorBorder;
 
@@ -38,7 +39,7 @@
       appearance: none;
       -webkit-appearance: none;
 
-      width: 50%;
+      width: 48%;
       height: 6px;
 
       border-radius: 25px;

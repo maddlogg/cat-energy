@@ -3,12 +3,12 @@
 
 .info {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   min-width: 280px;
   min-height: 114px;
 
-  padding-top: 30px;
+  padding-top: 28px;
 
   background-color: $colorMainBg;
 
@@ -37,6 +37,10 @@
 
   &__city {
     margin: 0;
+  }
+
+  @media (min-width: 321px) {
+    justify-content: space-between;
   }
 
   @media (min-width: $tabletWidth) {

@@ -32,7 +32,7 @@
 
   &--opened {
     .site-list {
-      display: block;
+      display: flex;
     }
 
     .main-navigation__toggle::before,
@@ -56,6 +56,16 @@
 
     .main-navigation__toggle::after {
       transform: rotate(-45deg);
+    }
+  }
+
+  &--nojs {
+    .site-list {
+      display: flex;
+    }
+
+    .main-navigation__toggle {
+      display: none;
     }
   }
 

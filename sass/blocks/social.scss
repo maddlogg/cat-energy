@@ -5,15 +5,22 @@
   &__list {
     display: flex;
     justify-content: center;
+
+    margin-left: 12px;
   }
 
   &__item {
-    width: 50px;
+    width: 40px;
 
-    margin-right: 10px;
+    margin-right: 15px;
     margin-bottom: 10px;
 
     text-align: center;
+  }
+
+  &__item:nth-child(2) {
+    margin-left: 1px;
+    margin-right: 13px;
   }
 
   &__link {

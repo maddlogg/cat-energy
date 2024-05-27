@@ -2,13 +2,15 @@
 @import "mixins/mixins.scss";
 
 .example {
-  padding-top: 30px;
+  padding-top: 17px;
+
+  min-height: 705px;
 
   background-color: $colorAddBg;
 
   &__title {
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 23px;
 
     font-size: $titleFontSize * 0.6;
     line-height: $titleLineHeight;
@@ -44,7 +46,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 
     text-align: center;
   }
@@ -61,7 +63,7 @@
     padding: 0;
 
     width: 124px;
-    height: 70px;
+    height: 68px;
     box-sizing: border-box;
 
     border: 1px solid;
@@ -157,7 +159,7 @@
   &__before-image,
   &__after-image {
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
   }
 
   &__before-image {

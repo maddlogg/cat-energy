@@ -5,7 +5,7 @@
   margin-bottom: 42px;
 
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 
     font-size: $titleFontSize * 0.6;
     font-weight: inherit;
@@ -33,11 +33,13 @@
     &:nth-child(2)::before {
       @include list-item-before;
       background-image: url(/img/andvantage-2.png);
+      background-position: 48% 45%;
     }
 
     &:nth-child(3)::before {
       @include list-item-before;
       background-image: url(/img/advantage-3.png);
+      background-position: 48% 50%;
     }
 
     &:nth-child(4)::before {
@@ -48,6 +50,7 @@
 
   &__description {
     padding: 0;
+    padding-top: 2px;
     margin: 0;
 
     font-family: Arial, sans-serif;

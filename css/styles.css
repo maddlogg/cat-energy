@@ -53,7 +53,7 @@ body ul {
 }
 
 .button {
-  padding: 10px 30px 10px 25px;
+  padding: 11px 30px 10px 25px;
   min-width: 245px;
   min-height: 40px;
   color: #ffffff;
@@ -91,7 +91,7 @@ body ul {
 }
 .page-header__logo-mobile {
   position: absolute;
-  top: 50%;
+  top: 30px;
   left: 0;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -177,7 +177,9 @@ body ul {
           box-shadow: 0 8px 0 0, 0 16px 0 0;
 }
 .main-navigation--opened .site-list {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .main-navigation--opened .main-navigation__toggle::before,
 .main-navigation--opened .main-navigation__toggle::after {
@@ -200,6 +202,14 @@ body ul {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+.main-navigation--nojs .site-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
 }
 .main-navigation__toggle {
   position: absolute;
@@ -318,7 +328,7 @@ body ul {
 .programms {
   min-height: 1055px;
   min-width: 320px;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 }
 .programms__wrapper {
   margin: 0 auto;
@@ -331,19 +341,23 @@ body ul {
   text-align: center;
   overflow-x: hidden;
 }
+.programms__header picture {
+  display: block;
+  height: 273px;
+}
 .programms__main-title {
   margin-bottom: 25px;
-  padding-top: 25px;
+  padding-top: 27px;
   font-size: 36px;
   line-height: 36px;
-  font-weight: inherit;
+  font-weight: 400;
   color: #ffffff;
 }
 .programms__slogan {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   font-size: 14px;
-  font-weight: inherit;
+  font-weight: 300;
   line-height: 14px;
   text-transform: uppercase;
   color: #ffffff;
@@ -353,12 +367,18 @@ body ul {
   width: 100%;
   margin-bottom: 22px;
   font-size: 14px;
-  font-weight: inherit;
+  font-weight: 350;
   line-height: 18px;
   text-transform: uppercase;
 }
 .programms__slim, .programms__weight {
   margin-bottom: 20px;
+}
+@media (min-width: 522px) and (max-width: 767px) {
+  .programms__link {
+    color: #68b738;
+    background-color: #ffffff;
+  }
 }
 @media (min-width: 768px) {
   .programms {
@@ -453,13 +473,13 @@ body ul {
 
 .slim {
   position: relative;
-  padding: 22px 35px 22px 20px;
+  padding: 22px 20px 22px 20px;
   min-width: 280px;
   min-height: 266px;
   background-color: #f2f2f2;
 }
 .slim__title {
-  margin-top: 13px;
+  margin-top: 8px;
   margin-left: 70px;
   margin-bottom: 30px;
   font-size: 24px;
@@ -470,7 +490,7 @@ body ul {
 .slim__title::before {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 24px;
   left: 22px;
   width: 50px;
   height: 50px;
@@ -488,7 +508,7 @@ body ul {
   background-size: 100%;
 }
 .slim__description {
-  padding-bottom: 22px;
+  padding-bottom: 21px;
   color: #444444;
   font-size: 14px;
   line-height: 18px;
@@ -622,14 +642,14 @@ body ul {
 
 .weight {
   position: relative;
-  padding: 22px 35px 22px 20px;
+  padding: 22px 20px 22px 20px;
   min-width: 280px;
   min-height: 266px;
   background-color: #f2f2f2;
 }
 .weight__title {
-  margin-top: 13px;
-  margin-left: 70px;
+  margin-top: 8px;
+  margin-left: 71px;
   margin-bottom: 30px;
   font-size: 24px;
   line-height: 37.02px;
@@ -639,7 +659,7 @@ body ul {
 .weight__title::before {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 24px;
   left: 22px;
   width: 50px;
   height: 50px;
@@ -650,14 +670,14 @@ body ul {
   content: "";
   position: absolute;
   top: 35px;
-  left: 9px;
-  width: 75px;
-  height: 31px;
+  left: 13px;
+  width: 68px;
+  height: 28px;
   background: url("/img/weight-icon.svg") center no-repeat;
   background-size: 100%;
 }
 .weight__description {
-  padding-bottom: 22px;
+  padding-bottom: 21px;
   color: #444444;
   font-size: 14px;
   line-height: 18px;
@@ -668,7 +688,7 @@ body ul {
 }
 .weight__catalog-link {
   position: absolute;
-  bottom: 25px;
+  bottom: 26px;
   display: block;
   margin-top: 18px;
   font-size: 16px;
@@ -793,7 +813,7 @@ body ul {
   margin-bottom: 42px;
 }
 .advatanges__title {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   font-size: 36px;
   font-weight: inherit;
   line-height: 60px;
@@ -835,6 +855,7 @@ body ul {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-image: url(/img/andvantage-2.png);
+  background-position: 48% 45%;
 }
 .advatanges__item:nth-child(3)::before {
   content: "";
@@ -849,6 +870,7 @@ body ul {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-image: url(/img/advantage-3.png);
+  background-position: 48% 50%;
 }
 .advatanges__item:nth-child(4)::before {
   content: "";
@@ -866,6 +888,7 @@ body ul {
 }
 .advatanges__description {
   padding: 0;
+  padding-top: 2px;
   margin: 0;
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -1004,12 +1027,13 @@ body ul {
 }
 
 .example {
-  padding-top: 30px;
+  padding-top: 17px;
+  min-height: 705px;
   background-color: #f2f2f2;
 }
 .example__title {
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 23px;
   font-size: 36px;
   line-height: 60px;
   font-weight: inherit;
@@ -1041,7 +1065,7 @@ body ul {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   text-align: center;
 }
 .example__result, .example__result-legend, .example__result-info {
@@ -1054,7 +1078,7 @@ body ul {
   margin: 0;
   padding: 0;
   width: 124px;
-  height: 70px;
+  height: 68px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid;
@@ -1126,7 +1150,7 @@ body ul {
 }
 .example__before-image, .example__after-image {
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
 }
 .example__before-image {
   left: 0;
@@ -1388,6 +1412,7 @@ body ul {
 .slider {
   width: 100%;
   min-width: 200px;
+  margin-left: 5px;
 }
 .slider__before-toggle, .slider__after-toggle {
   display: block;
@@ -1405,19 +1430,19 @@ body ul {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
-  margin: auto 19px;
-  padding: 6px 4px;
+  margin: auto 18px;
+  padding: 6px 5px;
   width: 25%;
   min-width: 84px;
   height: 14px;
-  border-radius: 25px;
+  border-radius: 5px;
   border: 1px solid;
   border-color: #cdcdcd;
 }
 .slider__input::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
-  width: 50%;
+  width: 48%;
   height: 6px;
   border-radius: 25px;
   background-color: #68b738;
@@ -1548,12 +1573,12 @@ body ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   min-width: 280px;
   min-height: 114px;
-  padding-top: 30px;
+  padding-top: 28px;
   background-color: #ffffff;
 }
 .info__title {
@@ -1576,6 +1601,13 @@ body ul {
 }
 .info__city {
   margin: 0;
+}
+@media (min-width: 321px) {
+  .info {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 @media (min-width: 768px) {
   .info {
@@ -1630,11 +1662,11 @@ body ul {
 }
 .page-footer__logo {
   display: block;
-  margin-bottom: 31px;
+  margin-bottom: 26px;
   cursor: pointer;
 }
 .page-footer__social {
-  padding-top: 21px;
+  padding-top: 22px;
   padding-bottom: 11px;
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -1684,12 +1716,17 @@ body ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 12px;
 }
 .social__item {
-  width: 50px;
-  margin-right: 10px;
+  width: 40px;
+  margin-right: 15px;
   margin-bottom: 10px;
   text-align: center;
+}
+.social__item:nth-child(2) {
+  margin-left: 1px;
+  margin-right: 13px;
 }
 .social__link {
   display: -webkit-box;
@@ -1793,6 +1830,9 @@ body ul {
   margin: auto 0;
 }
 .copyright__link-text {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 8px;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 16px;

@@ -4,7 +4,7 @@
 .programms {
   min-height: 1055px;
   min-width: 320px;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 
   &__wrapper {
     margin: 0 auto;
@@ -19,23 +19,28 @@
     text-align: center;
 
     overflow-x: hidden;
+
+    picture {
+      display: block;
+      height: 273px;
+    }
   }
   &__main-title {
     margin-bottom: 25px;
-    padding-top: 25px;
+    padding-top: 27px;
 
     font-size: $basefontSize * 2.25;
     line-height: $baseLineHeight * 1.5;
-    font-weight: inherit;
+    font-weight: 400;
     color: $colorMainBg;
   }
 
   &__slogan {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
 
     font-size: $basefontSize - 2;
-    font-weight: inherit;
+    font-weight: 300;
     line-height: $baseLineHeight - 10;
     text-transform: uppercase;
     color: $colorMainBg;
@@ -48,7 +53,7 @@
     margin-bottom: 22px;
 
     font-size: $basefontSize - 2;
-    font-weight: inherit;
+    font-weight: 350;
     line-height: $baseLineHeight - 6;
     text-transform: uppercase;
   }
@@ -56,6 +61,13 @@
   &__slim,
   &__weight {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: 522px) and (max-width: 767px) {
+    &__link {
+      color: $colorBg;
+      background-color: $colorTextNav;
+    }
   }
 
   @media (min-width: $tabletWidth) {

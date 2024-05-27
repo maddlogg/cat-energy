@@ -13,6 +13,9 @@
   }
 
   &__link-text {
+    align-self: flex-start;
+    margin-top: 8px;
+
     font-family: Arial, sans-serif;
     font-size: $basefontSize;
     line-height: 16px;

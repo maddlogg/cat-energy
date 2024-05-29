@@ -197,12 +197,12 @@
   }
 
   @media (min-width: $tabletWidth) {
-    min-height: 1045px;
+    min-height: 1038px;
     padding-top: 0;
     background-color: $colorMainBg;
 
     &__title {
-      margin-bottom: 50px;
+      margin-bottom: 64px;
 
       font-size: $titleFontSize;
     }
@@ -215,13 +215,14 @@
       display: flex;
       flex-wrap: wrap;
 
-      margin-bottom: 248px;
+      margin-bottom: 243px;
 
       background-color: $colorMainBg;
     }
 
     &__description {
-      margin-bottom: 55px;
+      margin-bottom: 53px;
+      padding-right: 10px;
 
       font-size: $basefontSize;
       line-height: $baseLineHeight;
@@ -233,7 +234,7 @@
 
     &__result {
       width: 162px;
-      height: 80px;
+      height: 84px;
 
       margin-right: 42px;
       margin-bottom: 0px;
@@ -249,7 +250,7 @@
     }
 
     &__result-info {
-      padding-bottom: 5px;
+      padding-bottom: 7px;
 
       font-size: $basefontSize * 1.875;
       line-height: $baseLineHeight * 1.5425;
@@ -259,6 +260,7 @@
       display: flex;
       flex-direction: column;
 
+      margin-top: 11px;
       margin-left: auto;
       margin-bottom: 0px;
 
@@ -267,7 +269,7 @@
     }
 
     &__price-info {
-      margin-top: 10px;
+      margin-top: 9px;
     }
 
     &__slider-wrapper,
@@ -320,10 +322,10 @@
       top: -152px;
       left: 50%;
 
-      width: 685px;
-      height: 510px;
+      width: 677px;
+      height: 499px;
 
-      transform: translateX(-50%);
+      transform: translateX(-49.9%);
     }
 
     &__after-image {
@@ -336,8 +338,8 @@
 
     &__slider {
       position: absolute;
-      bottom: 65px;
-      left: 50%;
+      bottom: 68px;
+      left: 49.3%;
       z-index: 3;
 
       margin: auto;

@@ -120,19 +120,20 @@
   }
 
   @media (min-width: $tabletWidth) {
-    padding: 70px 275px 55px 52px;
+    padding: 76px 275px 55px 52px;
 
-    min-height: 370px;
+    min-height: 372px;
 
     &__title {
       margin-top: 0px;
       margin-left: 0px;
+      margin-bottom: 25px;
 
       font-size: $titleFontSizeSmall;
 
       &::before {
         top: 92px;
-        right: 60px;
+        right: 62px;
         left: auto;
 
         width: 200px;
@@ -162,23 +163,23 @@
     }
 
     &__catalog-link {
-      bottom: 65px;
+      bottom: 62px;
 
       font-size: $basefontSize * 1.25;
       line-height: $baseLineHeight - 4;
 
       &::before {
-        bottom: 6px;
-        left: 125px;
+        bottom: 8px;
+        left: 132px;
       }
 
       &::after {
-        bottom: 2px;
-        left: 142px;
+        bottom: 4px;
+        left: 149px;
       }
 
       &:hover::after {
-        left: 151px;
+        left: 158px;
       }
     }
   }

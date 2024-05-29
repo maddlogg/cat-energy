@@ -41,12 +41,28 @@
   @media (min-width: $tabletWidth) {
     &__list {
       justify-content: space-between;
+
+      margin-left: 22px;
+      margin-bottom: 2px;
     }
 
     &__item {
-      width: 60px;
+      width: 50px;
       margin: auto;
       margin-right: 0;
+    }
+
+    &__item:nth-child(1) {
+      margin-right: 5px;
+    }
+
+    &__item:nth-child(2) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__item:nth-child(3) {
+      width: 44px;
     }
 
     &__link {

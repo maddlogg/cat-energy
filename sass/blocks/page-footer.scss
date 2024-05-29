@@ -51,6 +51,9 @@
     }
 
     &__logo {
+      margin-top: 64px;
+      margin-left: 1px;
+
       &:hover {
         opacity: 0.8;
       }
@@ -60,7 +63,6 @@
       }
     }
 
-    &__logo,
     &__social,
     &__copyright {
       margin: auto 0;

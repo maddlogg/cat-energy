@@ -44,13 +44,16 @@
 
     &__item {
       width: auto;
-      min-height: 42px;
-      margin-left: 33px;
-      padding: 12px 0;
+      min-height: 30px;
+      margin-left: 36px;
+      padding-top: 1px;
+      padding-bottom: 12px;
 
       border-bottom: none;
 
       &--active {
+        padding-bottom: 6px;
+
         border-bottom: 2px solid;
         border-bottom-color: $colorBg;
       }

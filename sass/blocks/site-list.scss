@@ -30,11 +30,11 @@
 
     color: $colorTextMain;
 
-    &:hover {
+    &:hover:not(.site-list__item--active > .site-list__link) {
       opacity: 60%;
     }
 
-    &:active {
+    &:active:not(.site-list__item--active > .site-list__link) {
       opacity: 30%;
     }
   }
@@ -52,7 +52,7 @@
       border-bottom: none;
 
       &--active {
-        padding-bottom: 6px;
+        padding-bottom: 10px;
 
         border-bottom: 2px solid;
         border-bottom-color: $colorBg;

@@ -1,0 +1,13 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.catalog {
+  min-height: 1776px;
+  min-width: 320px;
+
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+}

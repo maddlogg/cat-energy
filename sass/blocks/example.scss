@@ -360,7 +360,7 @@
     min-height: 370px;
 
     &__title {
-      margin-bottom: 70px;
+      margin-bottom: 75px;
     }
 
     &__wrapper {
@@ -401,7 +401,7 @@
     &__result-wrapper {
       justify-content: flex-start;
 
-      margin-bottom: 50px;
+      margin-bottom: 37px;
     }
 
     &__result {
@@ -412,8 +412,8 @@
       display: block;
 
       margin-top: 0;
-      margin-left: 0;
-      margin-bottom: 66px;
+      margin-left: 2px;
+      margin-bottom: 60px;
 
       text-align: left;
     }
@@ -452,7 +452,7 @@
     }
 
     &__before-image {
-      top: -173px;
+      top: -172px;
       left: 30px;
 
       width: 677px;
@@ -462,13 +462,14 @@
     }
 
     &__after-image {
-      top: -190px;
+      top: -189px;
       left: 121px;
     }
 
     &__slider {
-      left: 0;
+      left: 105px;
       right: 0;
+      bottom: 66px;
 
       transform: none;
     }

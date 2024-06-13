@@ -141,7 +141,7 @@
   }
 
   @media (min-width: $desktopWidth) {
-    min-height: 1005px;
+    min-height: 955px;
     margin-bottom: 72px;
 
     &__wrapper {
@@ -161,23 +161,38 @@
       flex-direction: column;
 
       min-height: 395px;
-      margin-left: 30px;
-      margin-top: 90px;
-      margin-bottom: 178px;
+      margin-left: 0;
+      margin-top: 84px;
+      margin-bottom: 187px;
+      padding-left: 80px;
 
       background: none;
       overflow-x: visible;
+
+      picture {
+        display: block;
+
+        height: 0;
+      }
+    }
+
+    &__slogan {
+      margin-bottom: 54px;
     }
 
     &__logo-image {
       position: absolute;
-      top: -50px;
-      left: 420px;
+      top: -52px;
+      left: 450px;
 
       width: 552px;
       height: 499px;
 
       display: block;
+    }
+
+    &__link {
+      margin-left: 0;
     }
 
     &__slim,

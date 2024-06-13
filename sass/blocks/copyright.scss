@@ -56,4 +56,14 @@
       margin-right: 22px;
     }
   }
+
+  @media (min-width: $desktopWidth) {
+    &__link {
+      margin-top: 5px;
+    }
+
+    &__link-text {
+      margin-right: 24px;
+    }
+  }
 }

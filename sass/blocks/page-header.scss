@@ -38,7 +38,6 @@
     &__wrapper {
       display: flex;
       gap: 286px;
-      // justify-content: space-between;
 
       padding: 24px 30px;
       padding-bottom: 0;
@@ -69,6 +68,13 @@
 
     &__logo-name-mobile {
       display: none;
+    }
+  }
+
+  @media (min-width: 800px) {
+    &__wrapper {
+      gap: 0;
+      justify-content: space-between;
     }
   }
 

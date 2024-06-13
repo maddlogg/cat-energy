@@ -69,18 +69,18 @@
     width: 570px;
     height: 201px;
 
-    padding: 50px 70px 60px 75px;
+    padding: 58px 90px 60px 75px;
 
     &__title {
       margin-right: 95px;
 
       font-size: $basefontSize * 1.25;
-      line-height: $baseLineHeight * 1.25;
+      line-height: 26px;
     }
 
     &__address {
       font-size: $basefontSize;
-      line-height: $baseLineHeight;
+      line-height: 20px;
 
       text-align: left;
     }

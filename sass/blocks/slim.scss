@@ -186,10 +186,11 @@
 
   @media (min-width: $desktopWidth) {
     max-width: 570px;
-    padding: 78px 30px 55px 50px;
+    padding: 76px 30px 55px 50px;
 
     &__title {
-      margin-bottom: 70px;
+      margin-left: 4px;
+      margin-bottom: 72px;
 
       text-align: center;
 
@@ -219,6 +220,8 @@
     }
 
     &__catalog-link {
+      margin-left: 3px;
+
       &::before {
         bottom: 8px;
       }

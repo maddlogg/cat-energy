@@ -8,6 +8,7 @@
       src="https://api-maps.yandex.ru/2.1/?apikey=f3c727af-e229-481e-b7a6-207cbeefda3f&lang=ru_RU"
       type="text/javascript"
     ></script>
+    <script src="/js/map.js"></script>
     <title>Cat Energy</title>
   </head>
   <body>
@@ -175,20 +176,21 @@
 
       <section class="contacts">
         <div class="contacts__wrapper">
-          <div class="contacts__info info info--form">
-            <h2 class="info__title">Приглашаем к сотрудничеству диллеров!</h2>
-            <p class="info__address">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="info__city">Санкт-Петербург</p>
+          <div class="contacts__info info">
+            <h2 class="info__title">
+              Приглашаем<br />
+              к сотрудничеству<br />
+              дилеров!
+            </h2>
+            <div class="info__address">
+              <p class="info__street">
+                ул. Большая<br />
+                Конюшенная, д. 19/8
+              </p>
+              <p class="info__city">Санкт-Петербург</p>
+            </div>
           </div>
-        </div>
-        <div class="contacts__map">
-          <img
-            class="contacts__map-image"
-            src="#"
-            width=""
-            height=""
-            alt="Адрес компании: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"
-          />
+          <div class="contacts__map" id="map"></div>
         </div>
       </section>
     </main>

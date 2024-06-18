@@ -1,0 +1,76 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.catalog-additional {
+  min-height: 966px;
+  min-width: 320px;
+
+  &__title {
+    padding: 30px 20px;
+
+    font-size: $basefontSize * 1.5;
+    line-height: $baseLineHeight;
+    font-weight: 400;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+
+    tbody {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      border-top: 1px solid;
+      border-color: $colorBorderNav;
+
+      tr {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding-bottom: 17px;
+
+        border-bottom: 1px solid;
+        border-color: $colorBorderNav;
+
+        td:first-child {
+          flex-grow: 1;
+          margin: 10px 0;
+          margin-right: 80%;
+
+          text-transform: uppercase;
+
+          white-space: nowrap;
+        }
+
+        td:nth-child(2),
+        td:nth-child(3) {
+          font-family: Arial, sans-serif;
+          font-size: $basefontSize * 0.875;
+          line-height: 14px;
+        }
+
+        td:nth-child(2) {
+          flex-grow: 1;
+
+          margin-bottom: 13px;
+        }
+
+        td:nth-child(3) {
+          text-transform: uppercase;
+        }
+
+        td:last-child {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+
+  &__gift {
+    margin-top: 39px;
+    margin-bottom: 35px;
+  }
+}

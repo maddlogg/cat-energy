@@ -26,4 +26,14 @@
     border-bottom: 1px solid;
     border-color: $colorBorderNav;
   }
+
+  @media (min-width: $tabletWidth) {
+    &__title {
+      padding: 60px 30px 20px;
+
+      font-size: $titleFontSize;
+
+      border: none;
+    }
+  }
 }

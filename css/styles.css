@@ -1773,6 +1773,12 @@ body ul {
   padding-top: 28px;
   background-color: #f2f2f2;
 }
+@media (min-width: 768px) {
+  #catalog .info {
+    padding: 0 30px;
+    padding-top: 63px;
+  }
+}
 
 .page-footer {
   min-width: 320px;
@@ -2210,10 +2216,21 @@ body ul {
   min-width: 320px;
 }
 .catalog-additional__title {
+  display: block;
+  position: relative;
   padding: 30px 20px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+}
+.catalog-additional__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 267px;
+  width: 100%;
+  height: 3px;
+  background-color: #68b738;
 }
 .catalog-additional__wrapper {
   margin: 0 auto;
@@ -2276,6 +2293,68 @@ body ul {
   margin-top: 39px;
   margin-bottom: 35px;
 }
+@media (min-width: 768px) {
+  .catalog-additional {
+    min-height: 1085px;
+  }
+  .catalog-additional__title {
+    padding: 71px 65px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .catalog-additional__title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 28px;
+    height: 3px;
+    background-color: #68b738;
+  }
+  .catalog-additional__title::after {
+    left: 441px;
+  }
+  .catalog-additional__wrapper {
+    padding: 0 30px;
+  }
+  .catalog-additional__wrapper table {
+    width: 100%;
+  }
+  .catalog-additional__wrapper tbody {
+    border: 1px solid;
+    border-color: #e6e6e6;
+  }
+  .catalog-additional__wrapper tbody tr {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    padding: 28px 37px 27px 38px;
+  }
+  .catalog-additional__wrapper tbody tr td:first-child {
+    margin: 0;
+    margin-right: 30%;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .catalog-additional__wrapper tbody tr td:nth-child(2),
+  .catalog-additional__wrapper tbody tr td:nth-child(3) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+  .catalog-additional__wrapper tbody tr td:nth-child(2) {
+    width: 130px;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+  .catalog-additional__wrapper tbody tr td:nth-child(3) {
+    width: 132px;
+  }
+  .catalog-additional__gift {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 
 .gift {
   position: relative;
@@ -2307,5 +2386,27 @@ body ul {
   line-height: 20px;
   text-align: center;
   color: #ffffff;
+}
+@media (min-width: 768px) {
+  .gift {
+    width: 100%;
+    min-height: 345px;
+    padding-top: 140px;
+    padding-left: 422px;
+    padding-right: 95px;
+    background-image: url("/img/gift-photo-tablet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .gift::before {
+    top: 50%;
+    left: 12.85%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .gift__description {
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

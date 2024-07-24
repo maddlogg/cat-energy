@@ -96,4 +96,9 @@
   padding-top: 28px;
 
   background-color: $colorAddBg;
+
+  @media (min-width: $tabletWidth) {
+    padding: 0 30px;
+    padding-top: 63px;
+  }
 }

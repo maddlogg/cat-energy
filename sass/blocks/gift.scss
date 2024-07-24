@@ -37,4 +37,28 @@
     text-align: center;
     color: $colorTextNav;
   }
+
+  @media (min-width: $tabletWidth) {
+    width: 100%;
+    min-height: 345px;
+
+    padding-top: 140px;
+    padding-left: 422px;
+    padding-right: 95px;
+
+    background-image: url("/img/gift-photo-tablet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+      top: 50%;
+      left: 12.85%;
+
+      transform: translateY(-50%);
+    }
+
+    &__description {
+      text-align: left;
+    }
+  }
 }

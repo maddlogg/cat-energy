@@ -36,4 +36,10 @@
       border: none;
     }
   }
+
+  @media (min-width: $desktopWidth) {
+    &__title {
+      padding: 60px 110px 100px;
+    }
+  }
 }

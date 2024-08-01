@@ -101,3 +101,9 @@
     }
   }
 }
+
+#catalog .page-header {
+  &::before {
+    background: none;
+  }
+}

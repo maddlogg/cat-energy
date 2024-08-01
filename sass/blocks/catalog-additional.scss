@@ -15,6 +15,8 @@
     line-height: $baseLineHeight;
     font-weight: 400;
 
+    overflow: hidden;
+
     &::after {
       content: "";
       position: absolute;
@@ -32,6 +34,10 @@
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
+
+    table {
+      width: 100%;
+    }
 
     tbody {
       display: flex;
@@ -51,9 +57,8 @@
         border-color: $colorBorderNav;
 
         td:first-child {
-          flex-grow: 1;
+          width: 100%;
           margin: 10px 0;
-          margin-right: 80%;
 
           text-transform: uppercase;
 
@@ -62,6 +67,8 @@
 
         td:nth-child(2),
         td:nth-child(3) {
+          width: 50%;
+
           font-family: Arial, sans-serif;
           font-size: $basefontSize * 0.875;
           line-height: 14px;
@@ -74,6 +81,7 @@
         }
 
         td:nth-child(3) {
+          text-align: right;
           text-transform: uppercase;
         }
 
@@ -118,10 +126,6 @@
     &__wrapper {
       padding: 0 30px;
 
-      table {
-        width: 100%;
-      }
-
       tbody {
         border: 1px solid;
         border-color: $colorBorderNav;
@@ -132,8 +136,7 @@
           padding: 28px 37px 27px 38px;
 
           td:first-child {
-            margin: 0;
-            margin-right: 30%;
+            width: 50%;
 
             font-size: $basefontSize * 1.25;
             line-height: 20px;
@@ -147,17 +150,89 @@
           }
 
           td:nth-child(2) {
-            width: 130px;
+            width: 16.92%;
 
             margin-left: auto;
             margin-bottom: 20px;
           }
 
           td:nth-child(3) {
-            width: 132px;
+            width: 17.1875%;
           }
         }
       }
+    }
+
+    &__gift {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    min-height: 566px;
+
+    &__title {
+      padding: 75px 110px;
+
+      &::before {
+        width: 70px;
+      }
+
+      &::after {
+        left: 483px;
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 0 110px;
+
+      table {
+        width: 895px;
+        min-height: 288px;
+
+        border-spacing: 0px;
+      }
+
+      tbody {
+        border: none;
+        border-top: 1px solid;
+        border-color: $colorBorderNav;
+
+        tr {
+          display: block;
+
+          padding: 15px 0px 16px 0px;
+
+          td:first-child {
+            width: 325px;
+            margin: 0;
+          }
+
+          td:nth-child(2),
+          td:nth-child(3) {
+            text-align: left;
+          }
+
+          td:nth-child(2) {
+            width: 245px;
+
+            margin-left: 0;
+            margin-bottom: 20px;
+          }
+
+          td:nth-child(3) {
+            width: 80px;
+          }
+        }
+      }
+    }
+
+    &__button {
+      width: 245px;
     }
 
     &__gift {

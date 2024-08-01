@@ -42,10 +42,16 @@
     text-transform: uppercase;
 
     &--more {
+      display: block;
+
+      width: 100%;
+
       margin: auto;
       margin-top: 55px;
       margin-bottom: 10px;
       padding-right: 0;
+
+      text-align: center;
 
       &::before,
       &::after {
@@ -133,6 +139,7 @@
 
       margin-top: 140px;
       padding: 24px 38px;
+      margin-right: 60px;
 
       border: none;
 
@@ -143,8 +150,8 @@
       }
     }
 
-    &__item:nth-child(2n-1) {
-      margin-right: 60px;
+    &__item:nth-child(2n) {
+      margin-right: 0;
     }
 
     &__item:last-of-type {
@@ -221,6 +228,60 @@
       font-size: $basefontSize;
 
       text-align: center;
+    }
+  }
+
+  @media (min-width: 1166px) {
+    &__item {
+      margin-right: 60px;
+    }
+
+    &__item:nth-child(2n) {
+      margin-right: 60px;
+    }
+
+    &__item:nth-child(3n),
+    &__item:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    min-height: 1150px;
+
+    &__wrapper {
+      padding: 0 110px;
+    }
+
+    &__item {
+      width: 245px;
+
+      margin-top: 145px;
+      margin-right: 80px;
+      padding: 40px 38px;
+    }
+
+    &__item:nth-child(2n-1),
+    &__item:nth-child(3n) {
+      margin-right: 80px;
+    }
+
+    &__item:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &__item-title {
+      margin-top: 120px;
+      padding: 0 10px;
+    }
+
+    &__item-description {
+      margin-bottom: 75px;
+      padding: 0;
+    }
+
+    &__button {
+      min-width: 168px;
     }
   }
 }

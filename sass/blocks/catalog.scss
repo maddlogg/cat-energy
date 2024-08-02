@@ -15,11 +15,12 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 
     width: 100%;
     min-height: 209px;
 
-    padding: 24px 20px;
+    padding: 21px 19px 24px;
 
     border: 1px solid;
     border-color: $colorBorderNav;
@@ -33,11 +34,15 @@
   }
 
   &__item-title {
+    display: block;
+
+    width: 80px;
+
     margin-left: 50%;
-    padding-right: 50px;
+    margin-bottom: 14px;
 
     font-size: $basefontSize;
-    line-height: 20px;
+    line-height: 19px;
     font-weight: 400;
     text-transform: uppercase;
 
@@ -47,8 +52,8 @@
       width: 100%;
 
       margin: auto;
-      margin-top: 55px;
-      margin-bottom: 10px;
+      margin-top: 58px;
+      margin-bottom: 9px;
       padding-right: 0;
 
       text-align: center;
@@ -77,13 +82,15 @@
 
   &__item-stats {
     margin-left: 50%;
-    margin-bottom: 13px;
+    margin-bottom: 22px;
     width: 50%;
+
+    border-spacing: 0px;
 
     tbody {
       font-family: Arial, sans-serif;
       font-size: $basefontSize * 0.75;
-      line-height: 10px;
+      line-height: 16px;
 
       tr td:nth-child(2) {
         text-align: right;
@@ -94,7 +101,7 @@
   &__item-description {
     margin: auto;
     margin-top: 0;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
 
     font-family: Arial, sans-serif;
     font-size: $basefontSize * 0.75;
@@ -138,7 +145,7 @@
       min-height: 431px;
 
       margin-top: 140px;
-      padding: 24px 38px;
+      padding: 24px 37px 24px 38px;
       margin-right: 60px;
 
       border: none;
@@ -174,8 +181,11 @@
     }
 
     &__item-title {
+      width: auto;
+
       margin: 0 auto;
-      margin-top: 111px;
+      margin-top: 140px;
+      margin-bottom: 20px;
       padding: 0 50px;
 
       font-size: $basefontSize * 1.25;
@@ -183,8 +193,8 @@
 
       &--more {
         margin: 0 auto;
-        margin-top: 128px;
-        margin-bottom: 20px;
+        margin-top: 140px;
+        margin-bottom: 27px;
 
         &::before,
         &::after {
@@ -203,14 +213,14 @@
 
     &__item-stats {
       margin-left: 0;
-      margin-bottom: 34px;
+      margin-bottom: 33px;
       width: 100%;
 
       border-collapse: collapse;
 
       tbody {
         font-size: $basefontSize;
-        line-height: 25px;
+        line-height: 31px;
 
         tr {
           border-bottom: 1px solid;
@@ -221,17 +231,20 @@
 
     &__item-description {
       margin: 0;
-      margin-bottom: 59px;
+      margin-bottom: 82px;
 
       padding: 0 30px;
 
       font-size: $basefontSize;
+      line-height: 20px;
 
       text-align: center;
     }
   }
 
   @media (min-width: 1166px) {
+    min-height: 1650px;
+
     &__item {
       margin-right: 60px;
     }
@@ -247,7 +260,7 @@
   }
 
   @media (min-width: $desktopWidth) {
-    min-height: 1150px;
+    min-height: 1145px;
 
     &__wrapper {
       padding: 0 110px;
@@ -256,13 +269,14 @@
     &__item {
       width: 245px;
 
-      margin-top: 145px;
+      margin-top: 143px;
       margin-right: 80px;
       padding: 40px 38px;
     }
 
     &__item:nth-child(2n-1),
-    &__item:nth-child(3n) {
+    &__item:nth-child(3n),
+    &__item:nth-child(2n) {
       margin-right: 80px;
     }
 
@@ -271,12 +285,12 @@
     }
 
     &__item-title {
-      margin-top: 120px;
+      margin-top: 124px;
       padding: 0 10px;
     }
 
     &__item-description {
-      margin-bottom: 75px;
+      margin-bottom: 81px;
       padding: 0;
     }
 

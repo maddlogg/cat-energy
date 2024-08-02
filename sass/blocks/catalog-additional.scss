@@ -8,8 +8,9 @@
   &__title {
     display: block;
     position: relative;
+    min-height: 85px;
 
-    padding: 30px 20px;
+    padding: 27px 19px 30px;
 
     font-size: $basefontSize * 1.5;
     line-height: $baseLineHeight;
@@ -20,7 +21,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 48.175862%;
       left: 267px;
 
       width: 100%;
@@ -37,6 +38,8 @@
 
     table {
       width: 100%;
+
+      border-spacing: 0px;
     }
 
     tbody {
@@ -101,7 +104,7 @@
     min-height: 1085px;
 
     &__title {
-      padding: 71px 65px;
+      padding: 67px 66px 79px;
 
       font-size: $basefontSize * 2.25;
       line-height: $baseLineHeight * 1.5;
@@ -109,7 +112,7 @@
       &::before {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 49%;
         left: 0;
 
         width: 28px;
@@ -119,12 +122,17 @@
       }
 
       &::after {
+        top: 49%;
         left: 441px;
       }
     }
 
     &__wrapper {
       padding: 0 30px;
+
+      table {
+        border-collapse: collapse;
+      }
 
       tbody {
         border: 1px solid;
@@ -133,7 +141,7 @@
         tr {
           align-items: baseline;
 
-          padding: 28px 37px 27px 38px;
+          padding: 17px 37px 27px 38px;
 
           td:first-child {
             width: 50%;
@@ -145,7 +153,7 @@
           td:nth-child(2),
           td:nth-child(3) {
             font-size: $basefontSize;
-            line-height: 20px;
+            line-height: 17px;
             text-align: right;
           }
 
@@ -153,18 +161,18 @@
             width: 16.92%;
 
             margin-left: auto;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
           }
 
           td:nth-child(3) {
-            width: 17.1875%;
+            width: 15.0875%;
           }
         }
       }
     }
 
     &__gift {
-      margin-top: 0;
+      margin-top: -4px;
       margin-bottom: 0;
     }
   }
@@ -173,13 +181,15 @@
     min-height: 566px;
 
     &__title {
-      padding: 75px 110px;
+      padding: 74px 110px 80px;
 
       &::before {
+        top: 50.5%;
         width: 70px;
       }
 
       &::after {
+        top: 50.5%;
         left: 483px;
       }
     }
@@ -214,6 +224,7 @@
 
           td:nth-child(2),
           td:nth-child(3) {
+            padding-top: 8px;
             text-align: left;
           }
 

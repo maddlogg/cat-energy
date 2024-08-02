@@ -6,8 +6,7 @@
   min-width: 245px;
   height: 289px;
 
-  padding: 0 26%;
-  padding-top: 190px;
+  padding-top: 188px;
 
   background-image: url("/img/gift-photo-mobile.jpg");
   background-position: center;
@@ -42,8 +41,8 @@
     width: 100%;
     min-height: 345px;
 
-    padding-top: 140px;
-    padding-left: 54.947917%;
+    padding-top: 144px;
+    padding-left: 59.947917%;
     padding-right: 95px;
 
     background-image: url("/img/gift-photo-tablet.jpg");
@@ -52,7 +51,7 @@
     background-size: 100%;
 
     &::before {
-      top: 50%;
+      top: 49%;
       left: 12.85%;
 
       transform: translateY(-50%);

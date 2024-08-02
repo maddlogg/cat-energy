@@ -72,9 +72,9 @@
     padding: 0;
   }
 
-  // @media (min-width: $tabletWidth) {
-  //   &__wrapper {
-  //     padding: 0 30px;
-  //   }
-  // }
+  @media (min-width: $desktopWidth) {
+    &__info {
+      top: 94px;
+    }
+  }
 }

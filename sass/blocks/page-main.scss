@@ -43,3 +43,37 @@
     }
   }
 }
+
+#form .page-main {
+  &__title {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    padding: 15px 20px 28px;
+
+    font-size: $titleFontSizeSmall;
+    line-height: $titleLineHeight;
+    font-weight: 400;
+    color: $colorTextMain;
+
+    border-top: 1px solid;
+    border-color: $colorBorderNav;
+  }
+
+  &__description {
+    display: block;
+    width: 100%;
+    min-height: 70px;
+    padding: 0px 30px 28px 20px;
+
+    font-size: $basefontSize * 0.875;
+    line-height: $baseLineHeight * 0.75;
+    font-weight: 400;
+    color: $colorTextMain;
+    text-transform: uppercase;
+  }
+
+  // &__form {
+  //   padding: 1% 20px 30px;
+  // }
+}

@@ -1,0 +1,374 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.form {
+  width: 100%;
+  min-height: 1191px;
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 163px;
+
+    margin-bottom: 32px;
+    padding: 0 20px;
+
+    & > div {
+      display: flex;
+
+      width: 100%;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-right: 15px;
+    padding-top: 14px;
+
+    font-size: $basefontSize;
+    line-height: $baseLineHeight * 0.75;
+    text-transform: uppercase;
+    color: $colorTabletNav;
+  }
+
+  &__input {
+    width: 55%;
+    height: 45px;
+    flex-grow: 1;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-family: Oswald, sans-serif;
+    font-size: $basefontSize;
+    line-height: $baseLineHeight * 0.75;
+    text-transform: uppercase;
+
+    border: 1px solid;
+    border-color: $colorBorderNav;
+
+    &::placeholder {
+      color: $colorTextP;
+    }
+
+    &:hover {
+      border-color: $colorBorder;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      border: 2px solid;
+      border-color: $colorTextP;
+    }
+
+    &--invalid {
+      outline: none;
+      border: 2px solid;
+      border-color: $colorInvalidInput;
+    }
+
+    &--invalid + div {
+      background-color: $colorInvalidInput;
+    }
+  }
+
+  &__program-type {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 158px;
+
+    padding: 20px;
+    padding-bottom: 0;
+
+    & > div {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+
+      width: 100%;
+
+      margin-bottom: 20px;
+    }
+
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $colorBorderNav;
+
+    label {
+      padding-top: 0px;
+      padding-top: 5px;
+      padding-left: 35px;
+      margin-bottom: 5px;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: 30px;
+        height: 30px;
+
+        border: 1px solid;
+        border-color: $colorRadio;
+        border-radius: 50%;
+
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 9px;
+
+        display: none;
+
+        width: 12px;
+        height: 12px;
+
+        background-color: $colorBg;
+
+        border-radius: 50%;
+
+        transform: translateY(-50%);
+      }
+
+      &:hover::before {
+        border-color: $colorRadioHvr;
+      }
+
+      &:active::before,
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    input {
+      position: absolute;
+      z-index: -1;
+
+      width: 30px;
+      height: 30px;
+
+      opacity: 0;
+
+      &[type="radio"]:checked ~ label::after {
+        display: block;
+      }
+    }
+  }
+
+  &__contact-data {
+    width: 100%;
+    min-height: 213px;
+
+    & > h2::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 221px;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $colorBg;
+    }
+
+    & > div {
+      display: flex;
+
+      margin-bottom: 20px;
+      padding: 0 20px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      & > input {
+        position: relative;
+
+        padding-right: 45px;
+
+        &:focus + div {
+          background-color: $colorBg;
+        }
+      }
+    }
+  }
+
+  &__mail-icon,
+  &__phone-icon {
+    position: absolute;
+    right: 30px;
+
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: auto;
+
+    background-color: $colorSvg;
+  }
+
+  &__mail-icon {
+    top: 53.72%;
+
+    width: 17px;
+    height: 13px;
+
+    mask-image: url(/img/mail.svg);
+  }
+
+  &__phone-icon {
+    top: 58.42%;
+
+    width: 20px;
+    height: 20px;
+
+    mask-image: url(/img/phone.svg);
+  }
+
+  &__title {
+    position: relative;
+
+    padding: 30px 20px;
+
+    font-size: $basefontSize * 1.5;
+    line-height: $baseLineHeight;
+    font-weight: 400;
+
+    overflow-x: hidden;
+  }
+
+  &__comment {
+    width: 100%;
+    min-height: 237px;
+
+    & > h2::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 162px;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $colorBg;
+    }
+
+    & > div {
+      padding: 0 20px;
+
+      & > textarea {
+        width: 100%;
+        min-height: 150px;
+
+        padding: 15px 14px 15px 15px;
+
+        resize: none;
+      }
+    }
+  }
+
+  &__additional {
+    width: 100%;
+    min-height: 257px;
+
+    & > h2::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 184px;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $colorBg;
+    }
+
+    & > div {
+      position: relative;
+
+      display: flex;
+
+      min-height: 30px;
+      margin-bottom: 13px;
+      padding: 0 20px;
+
+      & > input {
+        display: none;
+      }
+
+      & > input:checked + label::before {
+        background-image: url(/img/tick.svg);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+
+      & > label {
+        padding: 0;
+        padding-top: 4px;
+        padding-left: 47px;
+
+        &:hover::before {
+          border-color: $colorCheckboxHvr;
+        }
+
+        &:active,
+        &:active::before {
+          opacity: 0.3;
+        }
+      }
+
+      & > label::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 20px;
+
+        width: 30px;
+        height: 30px;
+
+        border: 1px solid;
+        border-color: $colorCheckbox;
+      }
+    }
+  }
+
+  &__button-div {
+    min-height: 131px;
+
+    padding: 22px 20px 32px 20px;
+  }
+
+  &__button {
+    width: 100%;
+
+    font-family: Oswald, sans-serif;
+    font-size: $basefontSize;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: none;
+  }
+
+  &__required {
+    display: block;
+
+    margin-top: 50px;
+
+    font-family: Arial, sans-serif;
+    font-size: $basefontSize * 0.875;
+    line-height: 16px;
+    text-align: center;
+  }
+}

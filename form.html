@@ -11,7 +11,7 @@
     <script src="/js/map.js"></script>
     <title>Cat Energy</title>
   </head>
-  <body>
+  <body id="form">
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
@@ -63,115 +63,158 @@
 
       <form class="page-main__form form" action="#" method="post">
         <div class="form__main">
-          <input
-            class="form__input name-input"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Барсик"
-          />
-          <label class="form__label name-label" for="name">Имя:*</label>
-          <input
-            class="form__input weight-input"
-            type="text"
-            id="weight"
-            name="weight"
-            placeholder="7"
-          />
-          <label class="form__label weight-label">Вес (кг):*</label>
-          <input
-            class="form__input age-input"
-            type="text"
-            id="age"
-            name="age"
-            placeholder="7"
-          />
-          <label class="form__label age-label">Возраст (лет):*</label>
+          <div>
+            <label class="form__label name-label" for="name">Имя:*</label>
+            <input
+              class="form__input name-input"
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Барсик"
+            />
+          </div>
+          <div>
+            <label class="form__label weight-label">Вес (кг):*</label>
+            <input
+              class="form__input weight-input"
+              type="text"
+              id="weight"
+              name="weight"
+              required
+              placeholder="7"
+            />
+          </div>
+          <div>
+            <label class="form__label age-label">Возраст (лет):</label>
+            <input
+              class="form__input age-input"
+              type="text"
+              id="age"
+              name="age"
+              placeholder="7"
+            />
+          </div>
         </div>
 
         <div class="form__program-type">
-          <input class="form__radio" type="radio" id="slim" name="programm" />
-          <label class="form__label radio-label" for="slim">Похудение</label>
-          <input class="form__radio" type="radio" id="weight" name="programm" />
-          <label class="form__label radio-label" for="weight"
-            >Набор массы</label
-          >
-          <input
-            class="form__radio"
-            type="radio"
-            id="unknown"
-            name="programm"
-          />
-          <label class="form__label radio-label" for="unknown"
-            >Не знаю (нужен ваш совет)</label
-          >
+          <div>
+            <input
+              class="form__radio"
+              type="radio"
+              id="slim"
+              checked
+              name="programm"
+            />
+            <label class="form__label radio-label" for="slim">Похудение</label>
+          </div>
+          <div>
+            <input class="form__radio" type="radio" id="gain" name="programm" />
+            <label class="form__label radio-label" for="gain"
+              >Набор массы</label
+            >
+          </div>
+          <div>
+            <input
+              class="form__radio"
+              type="radio"
+              id="unknown"
+              name="programm"
+            />
+            <label class="form__label radio-label" for="unknown"
+              >Не знаю (нужен ваш совет)</label
+            >
+          </div>
         </div>
 
         <div class="form__contact-data">
           <h2 class="form__title">Контактные данные (владельца кота)</h2>
-          <input
-            class="form__input mail-input"
-            type="text"
-            id="email"
-            name="email"
-            placeholder="kuklachev@gmail.com"
-          />
-          <label class="form__label mail-label" for="email">E-mail:*</label>
-          <input
-            class="form__input phone-input"
-            type="text"
-            id="phone"
-            name="phone"
-            placeholder="8 (960) 900-60-90"
-          />
-          <label class="form__label phone-label">Телефон:*</label>
+          <div>
+            <label class="form__label mail-label" for="email">E-mail:*</label>
+            <input
+              class="form__input form__mail"
+              type="text"
+              id="email"
+              name="email"
+              required
+              placeholder="kuklachev@gmail.com"
+            />
+            <div class="form__mail-icon"></div>
+          </div>
+          <div>
+            <label class="form__label phone-label">Телефон:*</label>
+            <input
+              class="form__input form__phone"
+              type="text"
+              id="phone"
+              name="phone"
+              required
+              placeholder="8 (960) 900-60-90"
+            />
+            <div class="form__phone-icon"></div>
+          </div>
         </div>
 
         <div class="form__comment">
           <h2 class="form__title">Комментарий</h2>
-          <input
-            class="form__input comment-input"
-            type="text"
-            id="comment"
-            name="comment"
-            placeholder="Расскажите обо всех повадках кота"
-          />
-          <label class="form__label visually-hidden" for="comment"
-            >Ваш комментарий</label
-          >
+          <div>
+            <textarea
+              class="form__input"
+              type="text"
+              id="comment"
+              name="comment"
+              placeholder="Расскажите обо всех повадках кота"
+            ></textarea>
+          </div>
         </div>
 
         <div class="form__additional">
           <h2 class="form__title">Дополнительно</h2>
-          <input
-            class="form__checkbox form__checkbox--checked"
-            type="checkbox"
-            id="sugar"
-            name="sugar"
-          />
-          <label class="form__label" for="sugar">Сахарозаменитель</label>
-          <input class="form__checkbox" type="checkbox" id="milk" name="milk" />
-          <label class="form__label" for="milk">Молоко</label>
-          <input
-            class="form__checkbox"
-            type="checkbox"
-            id="water"
-            name="water"
-          />
-          <label class="form__label" for="water">Питьевая вода</label>
-          <input
-            class="form__checkbox"
-            type="checkbox"
-            id="vitamins"
-            name="vitamins"
-          />
-          <label class="form__label" for="vitamins">Витамины</label>
+          <div>
+            <input
+              class="form__checkbox form__checkbox--checked"
+              type="checkbox"
+              id="sugar"
+              name="sugar"
+              checked
+            />
+            <label class="form__label" for="sugar">Сахарозаменитель</label>
+          </div>
+          <div>
+            <input
+              class="form__checkbox"
+              type="checkbox"
+              id="milk"
+              name="milk"
+            />
+            <label class="form__label" for="milk">Молоко</label>
+          </div>
+          <div>
+            <input
+              class="form__checkbox"
+              type="checkbox"
+              id="water"
+              name="water"
+            />
+            <label class="form__label" for="water">Питьевая вода</label>
+          </div>
+          <div>
+            <input
+              class="form__checkbox"
+              type="checkbox"
+              id="vitamins"
+              name="vitamins"
+            />
+            <label class="form__label" for="vitamins">Витамины</label>
+          </div>
         </div>
 
-        <button class="form__button button" type="submit">
-          Отправить заявку
-        </button>
-        <span class="form__required">* — Обязательные поля</span>
+        <div class="form__button-div">
+          <button class="form__button button" type="submit">
+            Отправить заявку
+          </button>
+          <span class="form__required">* — Обязательные поля</span>
+        </div>
       </form>
 
       <section class="contacts">

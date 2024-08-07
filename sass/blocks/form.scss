@@ -85,6 +85,10 @@
     padding: 20px;
     padding-bottom: 0;
 
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $colorBorderNav;
+
     & > div {
       position: relative;
       display: flex;
@@ -94,10 +98,6 @@
 
       margin-bottom: 20px;
     }
-
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-color: $colorBorderNav;
 
     label {
       padding-top: 0px;
@@ -178,12 +178,14 @@
       left: 221px;
 
       width: 100%;
-      height: 2px;
+      height: 3px;
 
       background-color: $colorBg;
     }
 
     & > div {
+      position: relative;
+
       display: flex;
 
       margin-bottom: 20px;
@@ -218,7 +220,7 @@
   }
 
   &__mail-icon {
-    top: 53.72%;
+    top: 36.67%;
 
     width: 17px;
     height: 13px;
@@ -227,7 +229,7 @@
   }
 
   &__phone-icon {
-    top: 58.42%;
+    top: 28.42%;
 
     width: 20px;
     height: 20px;
@@ -238,7 +240,7 @@
   &__title {
     position: relative;
 
-    padding: 30px 20px;
+    padding: 30px 30% 30px 20px;
 
     font-size: $basefontSize * 1.5;
     line-height: $baseLineHeight;
@@ -259,7 +261,7 @@
       left: 162px;
 
       width: 100%;
-      height: 2px;
+      height: 3px;
 
       background-color: $colorBg;
     }
@@ -290,10 +292,15 @@
       left: 184px;
 
       width: 100%;
-      height: 2px;
+      height: 3px;
 
       background-color: $colorBg;
     }
+  }
+
+  &__additional-wrapper {
+    display: flex;
+    flex-direction: column;
 
     & > div {
       position: relative;
@@ -370,5 +377,218 @@
     font-size: $basefontSize * 0.875;
     line-height: 16px;
     text-align: center;
+  }
+
+  @media (min-width: 460px) {
+    &__title {
+      padding: 30px 50% 30px 20px;
+    }
+  }
+
+  @media (min-width: 635px) {
+    &__title {
+      padding: 30px 60% 30px 20px;
+    }
+  }
+
+  @media (min-width: $tabletWidth) {
+    min-height: 1574px;
+
+    h2::before {
+      content: "";
+
+      position: absolute;
+      top: 52%;
+      left: 0;
+
+      width: 30px;
+      height: 3px;
+
+      background-color: $colorBg;
+    }
+
+    &__main {
+      min-height: 196px;
+
+      margin-bottom: 72px;
+      padding: 0 66px 0 70px;
+    }
+
+    &__label {
+      padding-top: 17px;
+
+      font-size: $basefontSize * 1.25;
+      line-height: 20px;
+    }
+
+    &__input {
+      height: 52px;
+
+      padding-left: 20px;
+
+      font-size: $basefontSize * 1.25;
+      line-height: 20px;
+    }
+
+    &__program-type {
+      justify-content: space-between;
+
+      width: 82%;
+      min-height: 196px;
+
+      margin-left: 70px;
+      margin-right: 66px;
+      padding: 25px 27px;
+
+      border: 1px solid;
+      border-color: $colorBorderNav;
+
+      & > div {
+        margin-bottom: 13px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      label {
+        padding-left: 65px;
+
+        &::before {
+          width: 40px;
+          height: 40px;
+        }
+
+        &::after {
+          left: 11px;
+
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      input {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__contact-data {
+      min-height: 311px;
+
+      & > h2::after {
+        top: 52%;
+        left: 623px;
+      }
+
+      & > div {
+        padding: 0 67px 0 70px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__mail-icon,
+    &__phone-icon {
+      right: 90px;
+    }
+
+    &__mail-icon {
+      top: 39.37%;
+    }
+
+    &__phone-icon {
+      top: 35.42%;
+    }
+
+    &__title {
+      padding: 70px;
+
+      font-size: $titleFontSizeSmall;
+      line-height: 36px;
+    }
+
+    &__comment {
+      min-height: 351px;
+
+      & > h2::after {
+        top: 52%;
+        left: 290px;
+      }
+
+      & > div {
+        padding: 0 67px 0 70px;
+
+        & > textarea {
+          min-height: 174px;
+
+          padding: 16px 20px;
+        }
+      }
+    }
+
+    &__additional {
+      min-height: 270px;
+
+      & > h2::after {
+        top: 52%;
+        left: 322px;
+      }
+    }
+
+    &__additional-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      padding: 0 70px;
+
+      & > div {
+        width: 50%;
+        min-height: 40px;
+
+        padding: 0;
+        padding-left: 60px;
+        margin-bottom: 32px;
+
+        & > label {
+          padding: 0;
+          padding-top: 10px;
+        }
+
+        & > label::before {
+          left: 0;
+
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    &__button-div {
+      display: flex;
+      align-items: flex-start;
+
+      min-height: 148px;
+
+      padding: 24px 67px 32px 70px;
+    }
+
+    &__button {
+      width: 44.778481%;
+      min-height: 52px;
+
+      margin-right: 60px;
+
+      font-size: $basefontSize * 1.25;
+    }
+
+    &__required {
+      margin-top: 15px;
+
+      font-size: $basefontSize;
+    }
   }
 }

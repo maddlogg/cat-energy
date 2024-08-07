@@ -73,6 +73,23 @@
     text-transform: uppercase;
   }
 
+  @media (min-width: $tabletWidth) {
+    &__title {
+      padding: 56px 30px 57px;
+
+      font-size: $titleFontSize;
+
+      border: none;
+    }
+
+    &__description {
+      padding: 0px 30px 66px 70px;
+
+      font-size: $basefontSize * 1.25;
+      line-height: $baseLineHeight * 1.25;
+    }
+  }
+
   // &__form {
   //   padding: 1% 20px 30px;
   // }

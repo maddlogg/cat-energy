@@ -182,7 +182,9 @@
 
       background-color: $colorBg;
     }
+  }
 
+  &__contact-data-wrapper {
     & > div {
       position: relative;
 
@@ -492,7 +494,7 @@
 
     &__mail-icon,
     &__phone-icon {
-      right: 90px;
+      right: 50px;
     }
 
     &__mail-icon {
@@ -589,6 +591,129 @@
       margin-top: 15px;
 
       font-size: $basefontSize;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    min-height: 1178px;
+
+    h2::before {
+      width: 70px;
+    }
+
+    &__main-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 0 110px;
+    }
+
+    &__main {
+      width: 570px;
+      min-height: 196px;
+
+      margin-bottom: 0;
+      padding: 0;
+
+      & > div {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__program-type {
+      width: 570px;
+      min-height: 196px;
+
+      margin: 0;
+    }
+
+    &__contact-data {
+      min-height: 233px;
+
+      & > h2::after {
+        left: 665px;
+      }
+
+      & > div {
+        padding: 0 110px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__contact-data-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      & > div {
+        width: 570px;
+
+        padding: 0;
+      }
+    }
+
+    &__mail-icon,
+    &__phone-icon {
+      right: 20px;
+    }
+
+    &__mail-icon {
+      top: 40%;
+    }
+
+    &__phone-icon {
+      top: 25%;
+    }
+
+    &__title {
+      padding: 70px 110px;
+    }
+
+    &__comment {
+      min-height: 334px;
+
+      & > h2::after {
+        left: 329px;
+      }
+
+      & > div {
+        padding: 0 110px;
+
+        & > textarea {
+          min-height: 176px;
+        }
+      }
+    }
+
+    &__additional {
+      min-height: 232px;
+
+      & > h2::after {
+        left: 362px;
+      }
+    }
+
+    &__additional-wrapper {
+      justify-content: space-between;
+
+      padding: 0 110px;
+
+      & > div {
+        width: 245px;
+      }
+    }
+
+    &__button-div {
+      min-height: 166px;
+
+      padding: 31px 110px;
+    }
+
+    &__button {
+      width: 570px;
     }
   }
 }

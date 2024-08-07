@@ -93,7 +93,8 @@
   }
 }
 
-#catalog .site-list {
+#catalog .site-list,
+#form .site-list {
   @media (min-width: $desktopWidth) {
     &__item {
       &--active {

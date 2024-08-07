@@ -102,7 +102,8 @@
   }
 }
 
-#catalog .page-header {
+#catalog .page-header,
+#form .page-header {
   &::before {
     background: none;
   }

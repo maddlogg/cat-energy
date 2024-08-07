@@ -63,96 +63,107 @@
       </p>
 
       <form class="page-main__form form" action="#" method="post">
-        <div class="form__main">
-          <div>
-            <label class="form__label name-label" for="name">Имя:*</label>
-            <input
-              class="form__input name-input"
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="Барсик"
-            />
+        <div class="form__main-wrapper">
+          <div class="form__main">
+            <div>
+              <label class="form__label name-label" for="name">Имя:*</label>
+              <input
+                class="form__input name-input"
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Барсик"
+              />
+            </div>
+            <div>
+              <label class="form__label weight-label">Вес (кг):*</label>
+              <input
+                class="form__input weight-input"
+                type="text"
+                id="weight"
+                name="weight"
+                required
+                placeholder="7"
+              />
+            </div>
+            <div>
+              <label class="form__label age-label">Возраст (лет):</label>
+              <input
+                class="form__input age-input"
+                type="text"
+                id="age"
+                name="age"
+                placeholder="7"
+              />
+            </div>
           </div>
-          <div>
-            <label class="form__label weight-label">Вес (кг):*</label>
-            <input
-              class="form__input weight-input"
-              type="text"
-              id="weight"
-              name="weight"
-              required
-              placeholder="7"
-            />
-          </div>
-          <div>
-            <label class="form__label age-label">Возраст (лет):</label>
-            <input
-              class="form__input age-input"
-              type="text"
-              id="age"
-              name="age"
-              placeholder="7"
-            />
-          </div>
-        </div>
 
-        <div class="form__program-type">
-          <div>
-            <input
-              class="form__radio"
-              type="radio"
-              id="slim"
-              checked
-              name="programm"
-            />
-            <label class="form__label radio-label" for="slim">Похудение</label>
-          </div>
-          <div>
-            <input class="form__radio" type="radio" id="gain" name="programm" />
-            <label class="form__label radio-label" for="gain"
-              >Набор массы</label
-            >
-          </div>
-          <div>
-            <input
-              class="form__radio"
-              type="radio"
-              id="unknown"
-              name="programm"
-            />
-            <label class="form__label radio-label" for="unknown"
-              >Не знаю (нужен ваш совет)</label
-            >
+          <div class="form__program-type">
+            <div>
+              <input
+                class="form__radio"
+                type="radio"
+                id="slim"
+                checked
+                name="programm"
+              />
+              <label class="form__label radio-label" for="slim"
+                >Похудение</label
+              >
+            </div>
+            <div>
+              <input
+                class="form__radio"
+                type="radio"
+                id="gain"
+                name="programm"
+              />
+              <label class="form__label radio-label" for="gain"
+                >Набор массы</label
+              >
+            </div>
+            <div>
+              <input
+                class="form__radio"
+                type="radio"
+                id="unknown"
+                name="programm"
+              />
+              <label class="form__label radio-label" for="unknown"
+                >Не знаю (нужен ваш совет)</label
+              >
+            </div>
           </div>
         </div>
 
         <div class="form__contact-data">
           <h2 class="form__title">Контактные данные (владельца кота)</h2>
-          <div>
-            <label class="form__label mail-label" for="email">E-mail:*</label>
-            <input
-              class="form__input form__mail"
-              type="text"
-              id="email"
-              name="email"
-              required
-              placeholder="kuklachev@gmail.com"
-            />
-            <div class="form__mail-icon"></div>
-          </div>
-          <div>
-            <label class="form__label phone-label">Телефон:*</label>
-            <input
-              class="form__input form__phone"
-              type="text"
-              id="phone"
-              name="phone"
-              required
-              placeholder="8 (960) 900-60-90"
-            />
-            <div class="form__phone-icon"></div>
+          <div class="form__contact-data-wrapper">
+            <div>
+              <label class="form__label mail-label" for="email">E-mail:*</label>
+              <input
+                class="form__input form__mail"
+                type="text"
+                id="email"
+                name="email"
+                required
+                placeholder="kuklachev@gmail.com"
+              />
+              <div class="form__mail-icon"></div>
+            </div>
+            <div>
+              <label class="form__label phone-label">Телефон:*</label>
+              <input
+                class="form__input form__phone"
+                type="text"
+                id="phone"
+                name="phone"
+                required
+                placeholder="8 (960) 900-60-90"
+              />
+              <div class="form__phone-icon"></div>
+            </div>
           </div>
         </div>
 

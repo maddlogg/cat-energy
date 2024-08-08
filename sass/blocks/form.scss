@@ -681,8 +681,13 @@
     &__contact-data {
       min-height: 233px;
 
+      & > h2::before,
       & > h2::after {
-        left: 665px;
+        top: 50%;
+      }
+
+      & > h2::after {
+        left: 663px;
       }
 
       & > div {
@@ -716,11 +721,20 @@
     }
 
     &__title {
-      padding: 70px 110px;
+      padding: 69px 109px 76px;
     }
 
     &__comment {
       min-height: 334px;
+
+      & > h2 {
+        padding-top: 47px;
+      }
+
+      & > h2::before,
+      & > h2::after {
+        top: 43.5%;
+      }
 
       & > h2::after {
         left: 329px;
@@ -730,13 +744,22 @@
         padding: 0 110px;
 
         & > textarea {
-          min-height: 176px;
+          min-height: 174px;
         }
       }
     }
 
     &__additional {
       min-height: 232px;
+
+      & > h2 {
+        padding-top: 62px;
+      }
+
+      & > h2::before,
+      & > h2::after {
+        top: 54%;
+      }
 
       & > h2::after {
         left: 362px;
@@ -754,13 +777,15 @@
     }
 
     &__button-div {
-      min-height: 166px;
+      min-height: 158px;
 
-      padding: 31px 110px;
+      padding: 24px 111px;
     }
 
     &__button {
-      width: 570px;
+      width: 568px;
+
+      margin-right: 82px;
     }
   }
 }

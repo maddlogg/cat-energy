@@ -431,7 +431,7 @@ body ul {
 }
 @media (min-width: 1440px) {
   #form .page-main__title {
-    padding: 75px 110px 60px;
+    padding: 78px 110px 55px;
   }
   #form .page-main__description {
     padding: 0px 30px 66px 110px;
@@ -3206,8 +3206,11 @@ body ul {
   .form__contact-data {
     min-height: 233px;
   }
+  .form__contact-data > h2::before, .form__contact-data > h2::after {
+    top: 50%;
+  }
   .form__contact-data > h2::after {
-    left: 665px;
+    left: 663px;
   }
   .form__contact-data > div {
     padding: 0 110px;
@@ -3235,10 +3238,16 @@ body ul {
     top: 25%;
   }
   .form__title {
-    padding: 70px 110px;
+    padding: 69px 109px 76px;
   }
   .form__comment {
     min-height: 334px;
+  }
+  .form__comment > h2 {
+    padding-top: 47px;
+  }
+  .form__comment > h2::before, .form__comment > h2::after {
+    top: 43.5%;
   }
   .form__comment > h2::after {
     left: 329px;
@@ -3247,10 +3256,16 @@ body ul {
     padding: 0 110px;
   }
   .form__comment > div > textarea {
-    min-height: 176px;
+    min-height: 174px;
   }
   .form__additional {
     min-height: 232px;
+  }
+  .form__additional > h2 {
+    padding-top: 62px;
+  }
+  .form__additional > h2::before, .form__additional > h2::after {
+    top: 54%;
   }
   .form__additional > h2::after {
     left: 362px;
@@ -3265,11 +3280,12 @@ body ul {
     width: 245px;
   }
   .form__button-div {
-    min-height: 166px;
-    padding: 31px 110px;
+    min-height: 158px;
+    padding: 24px 111px;
   }
   .form__button {
-    width: 570px;
+    width: 568px;
+    margin-right: 82px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

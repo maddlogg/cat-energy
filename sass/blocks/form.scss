@@ -1,0 +1,791 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.form {
+  width: 100%;
+  min-height: 1182px;
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 163px;
+
+    margin-bottom: 10px;
+    padding: 0 20px;
+
+    & > div {
+      display: flex;
+
+      width: 100%;
+
+      margin-bottom: 14px;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-right: 15px;
+    padding-top: 14px;
+
+    font-size: $basefontSize;
+    line-height: $baseLineHeight * 0.75;
+    text-transform: uppercase;
+    color: $colorTabletNav;
+  }
+
+  &__input {
+    width: 55%;
+    height: 45px;
+    flex-grow: 1;
+
+    padding-left: 14px;
+    padding-right: 15px;
+
+    font-family: Oswald, sans-serif;
+    font-size: $basefontSize;
+    line-height: $baseLineHeight * 0.75;
+    text-transform: uppercase;
+
+    border: 1px solid;
+    border-color: $colorBorderNav;
+
+    &::placeholder {
+      color: $colorTextP;
+    }
+
+    &:hover {
+      border-color: $colorBorder;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      border: 2px solid;
+      border-color: $colorTextP;
+    }
+
+    &--invalid {
+      outline: none;
+      border: 2px solid;
+      border-color: $colorInvalidInput;
+    }
+
+    &--invalid + div {
+      background-color: $colorInvalidInput;
+    }
+  }
+
+  &__program-type {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 158px;
+
+    padding: 20px;
+    padding-bottom: 0;
+
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $colorBorderNav;
+
+    & > div {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+
+      width: 100%;
+
+      margin-bottom: 14px;
+    }
+
+    label {
+      padding-top: 0px;
+      padding-top: 5px;
+      padding-left: 46px;
+      margin-bottom: 5px;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: 30px;
+        height: 30px;
+
+        border: 1px solid;
+        border-color: $colorRadio;
+        border-radius: 50%;
+
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 9px;
+
+        display: none;
+
+        width: 12px;
+        height: 12px;
+
+        background-color: $colorBg;
+
+        border-radius: 50%;
+
+        transform: translateY(-50%);
+      }
+
+      &:hover::before {
+        border-color: $colorRadioHvr;
+      }
+
+      &:active::before,
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    input {
+      position: absolute;
+      z-index: -1;
+
+      width: 30px;
+      height: 30px;
+
+      opacity: 0;
+
+      &[type="radio"]:checked ~ label::after {
+        display: block;
+      }
+    }
+  }
+
+  &__contact-data {
+    width: 100%;
+    min-height: 213px;
+
+    & > h2::after {
+      content: "";
+
+      position: absolute;
+      top: 39%;
+      left: 221px;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: $colorBg;
+    }
+  }
+
+  &__contact-data-wrapper {
+    & > div {
+      position: relative;
+
+      display: flex;
+
+      margin-bottom: 14px;
+      padding: 0 20px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      & > label {
+        margin-right: 10px;
+      }
+
+      & > input {
+        position: relative;
+
+        padding-right: 45px;
+
+        &:focus + div {
+          background-color: $colorBg;
+        }
+      }
+    }
+  }
+
+  &__mail-icon,
+  &__phone-icon {
+    position: absolute;
+    right: 36px;
+
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: auto;
+
+    background-color: $colorSvg;
+  }
+
+  &__mail-icon {
+    top: 36.67%;
+
+    width: 17px;
+    height: 13px;
+
+    mask-image: url(/img/mail.svg);
+  }
+
+  &__phone-icon {
+    top: 28.42%;
+    right: 33px;
+
+    width: 20px;
+    height: 20px;
+
+    mask-image: url(/img/phone.svg);
+  }
+
+  &__title {
+    position: relative;
+
+    padding: 27px 30% 33px 20px;
+
+    font-size: $basefontSize * 1.5;
+    line-height: $baseLineHeight;
+    font-weight: 400;
+
+    overflow-x: hidden;
+  }
+
+  &__comment {
+    width: 100%;
+    min-height: 237px;
+
+    & > h2::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 162px;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: $colorBg;
+    }
+
+    & > div {
+      padding: 0 20px;
+
+      & > textarea {
+        width: 100%;
+        min-height: 150px;
+
+        padding: 15px 14px 15px 15px;
+
+        resize: none;
+      }
+    }
+  }
+
+  &__additional {
+    width: 100%;
+    min-height: 257px;
+
+    & > h2::after {
+      content: "";
+
+      position: absolute;
+      top: 48%;
+      left: 184px;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: $colorBg;
+    }
+  }
+
+  &__additional-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+      position: relative;
+
+      display: flex;
+
+      min-height: 30px;
+      margin-bottom: 13px;
+      padding: 0 20px;
+
+      & > input {
+        display: none;
+      }
+
+      & > input:checked + label::before {
+        background-image: url(/img/tick.svg);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+
+      & > label {
+        padding: 0;
+        padding-top: 4px;
+        padding-left: 47px;
+
+        &:hover::before {
+          border-color: $colorCheckboxHvr;
+        }
+
+        &:active,
+        &:active::before {
+          opacity: 0.3;
+        }
+      }
+
+      & > label::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 20px;
+
+        width: 30px;
+        height: 30px;
+
+        border: 1px solid;
+        border-color: $colorCheckbox;
+      }
+    }
+  }
+
+  &__button-div {
+    min-height: 126px;
+
+    padding: 19px 20px 0px 20px;
+  }
+
+  &__button {
+    width: 100%;
+    min-height: 39px;
+
+    font-family: Oswald, sans-serif;
+    font-size: $basefontSize;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: none;
+  }
+
+  &__required {
+    display: block;
+
+    margin-top: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: $basefontSize * 0.875;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  @media (min-width: 460px) {
+    &__title {
+      padding: 30px 50% 30px 20px;
+    }
+  }
+
+  @media (min-width: 635px) {
+    &__title {
+      padding: 30px 60% 30px 20px;
+    }
+  }
+
+  @media (min-width: $tabletWidth) {
+    min-height: 1574px;
+
+    h2::before {
+      content: "";
+
+      position: absolute;
+      top: 52%;
+      left: 0;
+
+      width: 30px;
+      height: 3px;
+
+      background-color: $colorBg;
+    }
+
+    &__main {
+      min-height: 196px;
+
+      margin-bottom: 52px;
+      padding: 0 66px 0 70px;
+
+      & > div {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__label {
+      padding-top: 15px;
+      padding-left: 1px;
+      margin-right: 16px;
+
+      font-size: $basefontSize * 1.25;
+      line-height: 20px;
+    }
+
+    &__input {
+      height: 52px;
+
+      padding-left: 20px;
+
+      font-size: $basefontSize * 1.25;
+      line-height: 20px;
+    }
+
+    &__program-type {
+      justify-content: space-between;
+
+      width: 82%;
+      min-height: 196px;
+
+      margin-left: 71px;
+      margin-right: 66px;
+      padding: 29px 27px;
+
+      border: 1px solid;
+      border-color: $colorBorderNav;
+
+      & > div {
+        margin-bottom: 13px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      label {
+        padding-left: 59px;
+
+        &::before {
+          width: 40px;
+          height: 40px;
+        }
+
+        &::after {
+          left: 11px;
+
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      input {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__contact-data {
+      min-height: 311px;
+
+      & > h2::after {
+        top: 52%;
+        left: 623px;
+      }
+    }
+
+    &__contact-data-wrapper {
+      & > div {
+        padding: 0 67px 0 70px;
+        margin-bottom: 20px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        & > label {
+          margin-right: 19px;
+        }
+      }
+
+      & > div:nth-child(2) {
+        & > label {
+          margin-right: 13px;
+        }
+      }
+    }
+
+    &__mail-icon,
+    &__phone-icon {
+      right: 86px;
+    }
+
+    &__mail-icon {
+      top: 39.37%;
+    }
+
+    &__phone-icon {
+      top: 35.42%;
+      right: 83px;
+    }
+
+    &__title {
+      padding: 75px 69px 76px;
+
+      font-size: $titleFontSizeSmall;
+      line-height: 36px;
+    }
+
+    &__comment {
+      min-height: 351px;
+
+      & > h2 {
+        padding-top: 65px;
+      }
+
+      & > h2::before,
+      & > h2::after {
+        top: 49%;
+      }
+
+      & > h2::after {
+        left: 290px;
+      }
+
+      & > div {
+        padding: 0 67px 0 70px;
+
+        & > textarea {
+          min-height: 174px;
+
+          padding: 14px 19px;
+        }
+      }
+    }
+
+    &__additional {
+      min-height: 270px;
+
+      & > h2 {
+        padding-top: 60px;
+        padding-bottom: 57px;
+      }
+
+      & > h2::before,
+      & > h2::after {
+        top: 53.5%;
+      }
+
+      & > h2::after {
+        left: 322px;
+      }
+    }
+
+    &__additional-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      padding: 0 70px;
+
+      & > div {
+        width: 45.276166%;
+        min-height: 40px;
+
+        padding: 0;
+        padding-left: 58px;
+        margin-bottom: 32px;
+
+        & > label {
+          padding: 0;
+          padding-top: 9px;
+        }
+
+        & > label::before {
+          left: 0;
+
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    &__button-div {
+      display: flex;
+      align-items: flex-start;
+
+      min-height: 146px;
+
+      padding: 22px 67px 32px 71px;
+    }
+
+    &__button {
+      width: 44.878481%;
+      min-height: 52px;
+
+      margin-right: 61px;
+
+      font-size: $basefontSize * 1.25;
+    }
+
+    &__required {
+      margin-top: 16px;
+
+      font-size: $basefontSize;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    min-height: 1178px;
+
+    h2::before {
+      width: 70px;
+    }
+
+    &__main-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 0 110px;
+    }
+
+    &__main {
+      width: 570px;
+      min-height: 196px;
+
+      margin-bottom: 0;
+      padding: 0;
+
+      & > div {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__program-type {
+      width: 570px;
+      min-height: 196px;
+
+      margin: 0;
+    }
+
+    &__contact-data {
+      min-height: 233px;
+
+      & > h2::before,
+      & > h2::after {
+        top: 50%;
+      }
+
+      & > h2::after {
+        left: 663px;
+      }
+
+      & > div {
+        padding: 0 110px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__contact-data-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      & > div {
+        width: 570px;
+
+        padding: 0;
+      }
+    }
+
+    &__mail-icon,
+    &__phone-icon {
+      right: 20px;
+    }
+
+    &__mail-icon {
+      top: 40%;
+    }
+
+    &__phone-icon {
+      top: 25%;
+    }
+
+    &__title {
+      padding: 69px 109px 76px;
+    }
+
+    &__comment {
+      min-height: 334px;
+
+      & > h2 {
+        padding-top: 47px;
+      }
+
+      & > h2::before,
+      & > h2::after {
+        top: 43.5%;
+      }
+
+      & > h2::after {
+        left: 329px;
+      }
+
+      & > div {
+        padding: 0 110px;
+
+        & > textarea {
+          min-height: 174px;
+        }
+      }
+    }
+
+    &__additional {
+      min-height: 232px;
+
+      & > h2 {
+        padding-top: 62px;
+      }
+
+      & > h2::before,
+      & > h2::after {
+        top: 54%;
+      }
+
+      & > h2::after {
+        left: 362px;
+      }
+    }
+
+    &__additional-wrapper {
+      justify-content: space-between;
+
+      padding: 0 110px;
+
+      & > div {
+        width: 245px;
+      }
+    }
+
+    &__button-div {
+      min-height: 158px;
+
+      padding: 24px 111px;
+    }
+
+    &__button {
+      width: 568px;
+
+      margin-right: 82px;
+    }
+  }
+}

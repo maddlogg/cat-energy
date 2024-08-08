@@ -2,22 +2,82 @@
 @import "mixins/mixins.scss";
 
 .page-footer {
-  min-height: 150px;
+  min-width: 320px;
+  min-height: 236px;
+
+  padding-top: 39px;
+
+  text-align: center;
 
   background-color: $colorAddBg;
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    margin: auto 110px;
-    min-height: 150px;
+    padding: 0 20px;
     height: 100%;
   }
 
-  &__logo,
-  &__social,
-  &__copyright {
-    margin: auto 0;
+  &__logo {
+    display: block;
+
+    margin-bottom: 26px;
+
+    cursor: pointer;
+  }
+
+  &__social {
+    padding-top: 22px;
+    padding-bottom: 11px;
+
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $colorBorderProgramm;
+  }
+
+  @media (min-width: $tabletWidth) {
+    min-height: 150px;
+
+    padding-top: 0;
+
+    text-align: left;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      margin: auto 0;
+      padding: 0 30px;
+
+      min-height: 150px;
+    }
+
+    &__logo {
+      margin-top: 64px;
+      margin-left: 1px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+    &__social,
+    &__copyright {
+      margin: auto 0;
+    }
+
+    &__social {
+      padding: 0;
+
+      border: none;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    &__wrapper {
+      padding: 0 110px;
+    }
   }
 }

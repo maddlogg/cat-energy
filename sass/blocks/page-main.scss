@@ -1,11 +1,105 @@
 @import "./../variables/variables.scss";
 @import "mixins/mixins.scss";
 
-.page-main {
+#index .page-main {
   background: url(/img/index-background-mobile.jpg) top center no-repeat;
   background-size: 100% auto;
 
   @media (min-width: $tabletWidth) {
     background: none;
+  }
+}
+
+#catalog .page-main {
+  &__title {
+    display: block;
+    width: 100%;
+    min-height: 105px;
+    padding: 15px 20px 28px;
+
+    font-size: $titleFontSizeSmall;
+    line-height: $titleLineHeight;
+    font-weight: 400;
+    color: $colorTextMain;
+
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $colorBorderNav;
+  }
+
+  @media (min-width: $tabletWidth) {
+    &__title {
+      padding: 56px 30px 25px;
+
+      font-size: $titleFontSize;
+
+      border: none;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    &__title {
+      padding: 78px 110px 22px;
+    }
+  }
+}
+
+#form .page-main {
+  &__title {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    padding: 14px 20px 25px;
+
+    font-size: $titleFontSizeSmall;
+    line-height: $titleLineHeight;
+    font-weight: 400;
+    color: $colorTextMain;
+
+    border-top: 1px solid;
+    border-color: $colorBorderNav;
+  }
+
+  &__description {
+    display: block;
+    width: 100%;
+    min-height: 70px;
+    padding: 0px 30px 39px 20px;
+
+    font-size: $basefontSize * 0.875;
+    line-height: $baseLineHeight * 0.75;
+    font-weight: 400;
+    color: $colorTextMain;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $tabletWidth) {
+    &__title {
+      padding: 56px 29px 55px;
+
+      font-size: $titleFontSize;
+
+      border: none;
+    }
+
+    &__description {
+      padding: 0px 30px 66px 70px;
+
+      font-size: $basefontSize * 1.25;
+      line-height: $baseLineHeight * 1.25;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    &__title {
+      padding: 78px 110px 55px;
+    }
+
+    &__description {
+      padding: 0px 30px 66px 110px;
+
+      font-size: $basefontSize * 1.25;
+      line-height: $baseLineHeight * 1.25;
+    }
   }
 }

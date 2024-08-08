@@ -2,46 +2,53 @@
 @import "mixins/mixins.scss";
 
 .example {
-  &__title {
-    margin-bottom: 60px;
-    margin-left: 110px;
+  padding-top: 17px;
 
-    font-size: $titleFontSize;
+  min-height: 705px;
+
+  background-color: $colorAddBg;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 23px;
+
+    font-size: $titleFontSize * 0.6;
     line-height: $titleLineHeight;
     font-weight: inherit;
   }
 
   &__wrapper {
-    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    width: 100%;
+    min-width: 320px;
   }
 
   &__description-wrapper {
-    display: flex;
-    flex-direction: column;
-
-    padding-left: 110px;
-    padding-right: 175px;
-
-    max-width: 720px;
+    width: 100%;
 
     background-color: $colorAddBg;
   }
 
   &__description {
-    margin-top: 75px;
-    margin-bottom: 70px;
+    margin-bottom: 25px;
+    padding-right: 5px;
 
     font-family: Arial, sans-serif;
-    font-size: $basefontSize;
-    line-height: $baseLineHeight;
+    font-size: $basefontSize * 0.875;
+    line-height: $baseLineHeight * 0.75;
     color: $colorTextP;
   }
 
   &__result-wrapper {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 
-    margin-bottom: 60px;
+    margin-bottom: 22px;
+
+    text-align: center;
   }
 
   &__result,
@@ -55,12 +62,9 @@
     margin: 0;
     padding: 0;
 
-    width: 162px;
-    height: 80px;
+    width: 124px;
+    height: 68px;
     box-sizing: border-box;
-
-    margin-right: 42px;
-    margin-bottom: 10px;
 
     border: 1px solid;
     border-color: #cdcdcd;
@@ -68,46 +72,54 @@
   }
 
   &__result-legend {
-    height: 30px;
+    width: 87px;
+    height: 25px;
   }
 
   &__result-legend-text {
-    margin: 0 8px;
-    padding-bottom: 10px;
+    display: block;
+
+    margin: 0 5px;
+    padding-top: 5px;
+
+    height: 25px;
 
     font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: $basefontSize * 0.75;
+    line-height: $baseLineHeight * 0.5;
+    text-align: center;
   }
 
   &__result-info {
     display: inline-block;
 
     margin: 0;
+    padding-bottom: 5px;
 
-    font-size: $basefontSize * 1.875;
-    line-height: $baseLineHeight * 1.5425;
+    font-size: $basefontSize * 1.5;
+    line-height: $baseLineHeight;
     text-transform: uppercase;
   }
 
   &__price {
-    margin-bottom: 10px;
+    margin-bottom: 36px;
 
-    font-size: $basefontSize * 1.25;
+    font-size: $basefontSize * 0.875;
     line-height: 20px;
     text-transform: uppercase;
     font-weight: inherit;
+    text-align: center;
   }
 
   &__price-info {
-    margin-left: 67px;
+    margin-left: 3px;
   }
 
   &__slider-wrapper {
     display: flex;
 
-    width: 50%;
-    min-height: 460px;
+    width: 100%;
+    min-height: 320px;
 
     position: relative;
 
@@ -118,41 +130,348 @@
   &__after {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -20px;
     z-index: 1;
 
     width: 100%;
-    height: 100%;
+    height: 240px;
+
+    overflow: hidden;
   }
 
   &__before {
+    z-index: 2;
+
+    width: 50%;
+    margin: 0 auto;
+
     background-color: $colorAddBg;
   }
 
-  &__after {
-    display: none;
+  &__before-wrapper {
+    position: relative;
 
-    background-color: $colorAfterBg;
+    width: 100vw;
+    min-width: 320px;
+    min-height: 240px;
   }
 
   &__before-image,
   &__after-image {
     position: absolute;
-    top: -30%;
-    left: 50%;
-    z-index: 2;
+    bottom: 2px;
+  }
 
-    transform: translateX(-50%);
+  &__before-image {
+    left: 0;
+    z-index: 3;
+  }
+
+  &__after-image {
+    left: 43px;
+    z-index: 2;
   }
 
   &__slider {
-    position: absolute;
-    bottom: 45px;
-    left: 50%;
-    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    margin: auto;
+    margin: 0 auto;
+    margin-top: 240px;
+  }
 
-    transform: translateX(-50%);
+  @media (min-width: 321px) and (max-width: 767px) {
+    &__before-image,
+    &__after-image {
+      left: 50%;
+    }
+
+    &__before-image {
+      margin-left: -156px;
+    }
+
+    &__after-image {
+      margin-left: -126px;
+    }
+  }
+
+  @media (min-width: $tabletWidth) {
+    min-height: 1038px;
+    padding-top: 0;
+    background-color: $colorMainBg;
+
+    &__title {
+      margin-bottom: 64px;
+
+      font-size: $titleFontSize;
+    }
+
+    &__wrapper {
+      padding: 0 30px;
+    }
+
+    &__description-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-bottom: 243px;
+
+      background-color: $colorMainBg;
+    }
+
+    &__description {
+      margin-bottom: 53px;
+      padding-right: 10px;
+
+      font-size: $basefontSize;
+      line-height: $baseLineHeight;
+    }
+
+    &__result-wrapper {
+      margin-bottom: 0;
+    }
+
+    &__result {
+      width: 162px;
+      height: 84px;
+
+      margin-right: 42px;
+      margin-bottom: 0px;
+    }
+
+    &__result-legend {
+      width: auto;
+    }
+
+    &__result-legend-text {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    &__result-info {
+      padding-bottom: 7px;
+
+      font-size: $basefontSize * 1.875;
+      line-height: $baseLineHeight * 1.5425;
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 11px;
+      margin-left: auto;
+      margin-bottom: 0px;
+
+      font-size: $basefontSize * 1.25;
+      text-align: right;
+    }
+
+    &__price-info {
+      margin-top: 9px;
+    }
+
+    &__slider-wrapper,
+    &__before-wrapper,
+    &__after-wrapper {
+      min-height: 462px;
+    }
+
+    &__before-wrapper {
+      top: 170px;
+
+      background-color: $colorAddBg;
+    }
+
+    &__after-wrapper {
+      position: relative;
+      top: 169px;
+      left: 0;
+
+      background-color: $colorAfterBg;
+    }
+
+    &__before,
+    &__after {
+      top: -169px;
+      left: 0;
+
+      margin-left: calc(-50vw + 50%);
+      min-height: 631px;
+    }
+
+    &__before {
+      width: 50vw;
+
+      background-color: #fff;
+    }
+
+    &__after {
+      width: 100vw;
+
+      background-color: transparent;
+    }
+
+    &__before-image,
+    &__after-image {
+      z-index: 2;
+    }
+
+    &__before-image {
+      top: -152px;
+      left: 50%;
+
+      width: 677px;
+      height: 499px;
+
+      transform: translateX(-49.9%);
+    }
+
+    &__after-image {
+      top: -169px;
+      left: 17.8385417%;
+
+      width: 545px;
+      height: 517px;
+    }
+
+    &__slider {
+      position: absolute;
+      bottom: 68px;
+      left: 49.3%;
+      z-index: 3;
+
+      margin: auto;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1439px) {
+    &__after-image {
+      left: 50%;
+
+      margin-left: -272.5px;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    min-height: 370px;
+
+    &__title {
+      margin-bottom: 75px;
+    }
+
+    &__wrapper {
+      padding: 0 110px;
+    }
+
+    &__content-wrapper {
+      display: flex;
+
+      width: 100vw;
+      max-width: 1440px;
+      margin-left: -110px;
+      padding: 0 110px;
+      padding-right: 0;
+
+      background-color: $colorAddBg;
+    }
+
+    &__description-wrapper {
+      flex-direction: column;
+
+      margin-bottom: 0;
+      padding-top: 70px;
+      padding-right: 107px;
+
+      width: 540px;
+      max-width: 720px;
+
+      background-color: $colorAddBg;
+    }
+
+    &__description {
+      margin-top: 0px;
+      margin-bottom: 70px;
+      padding: 0;
+    }
+
+    &__result-wrapper {
+      justify-content: flex-start;
+
+      margin-bottom: 37px;
+    }
+
+    &__result {
+      margin-bottom: 10px;
+    }
+
+    &__price {
+      display: block;
+
+      margin-top: 0;
+      margin-left: 2px;
+      margin-bottom: 60px;
+
+      text-align: left;
+    }
+
+    &__price-info {
+      margin-left: 67px;
+    }
+
+    &__slider-wrapper {
+      width: 790px;
+      min-height: 460px;
+    }
+
+    &__before-wrapper,
+    &__after-wrapper {
+      top: 190px;
+    }
+
+    &__before,
+    &__after {
+      top: -190px;
+      left: 0;
+
+      margin-left: 0;
+
+      height: 100%;
+      min-height: 652px;
+    }
+
+    &__before {
+      width: 50%;
+    }
+
+    &__after {
+      width: 100%;
+    }
+
+    &__before-image {
+      top: -172px;
+      left: 30px;
+
+      width: 677px;
+      height: 499px;
+
+      transform: none;
+    }
+
+    &__after-image {
+      top: -189px;
+      left: 121px;
+    }
+
+    &__slider {
+      left: 105px;
+      right: 0;
+      bottom: 66px;
+
+      transform: none;
+    }
   }
 }

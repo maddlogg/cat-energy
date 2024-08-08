@@ -12,12 +12,19 @@ html {
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
+
   box-sizing: inherit;
+
+  // border: 1px solid red;
 }
 
 body {
   margin: 0 auto;
+  width: 100%;
   max-width: 1440px;
+  min-width: 320px;
 
   font-family: "Oswald", Arial, sans-serif;
 
@@ -25,6 +32,8 @@ body {
 
   color: $colorTextMain;
   background-color: $colorMainBg;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
   a {
     text-decoration: none;
@@ -54,12 +63,20 @@ body {
 }
 
 .button {
-  padding: 10px 30px 10px 25px;
+  padding: 11px 30px 10px 25px;
   min-width: 245px;
   min-height: 40px;
 
   color: $colorTextNav;
   background-color: $colorBg;
+
+  &:hover {
+    background-color: $colorButtonHvr;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @import "blocks/page-header.scss";
@@ -77,3 +94,7 @@ body {
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
+@import "blocks/catalog.scss";
+@import "blocks/catalog-additional.scss";
+@import "blocks/gift.scss";
+@import "blocks/form.scss";

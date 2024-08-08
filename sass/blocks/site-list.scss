@@ -11,6 +11,9 @@
     min-height: 66px;
     &:first-child {
       margin-left: 0;
+
+      border-top: 1px solid;
+      border-top-color: $colorBorderNav;
     }
     padding: 23px 0;
 
@@ -27,11 +30,11 @@
 
     color: $colorTextMain;
 
-    &:hover {
+    &:hover:not(.site-list__item--active > .site-list__link) {
       opacity: 60%;
     }
 
-    &:active {
+    &:active:not(.site-list__item--active > .site-list__link) {
       opacity: 30%;
     }
   }
@@ -41,15 +44,22 @@
 
     &__item {
       width: auto;
-      min-height: 42px;
-      margin-left: 33px;
-      padding: 12px 0;
+      min-height: 30px;
+      margin-left: 36px;
+      padding-top: 1px;
+      padding-bottom: 12px;
 
       border-bottom: none;
 
       &--active {
+        padding-bottom: 10px;
+
         border-bottom: 2px solid;
         border-bottom-color: $colorBg;
+      }
+
+      &:first-child {
+        border-top: none;
       }
     }
 
@@ -79,6 +89,21 @@
       line-height: 24.86px;
 
       color: $colorTextNav;
+    }
+  }
+}
+
+#catalog .site-list,
+#form .site-list {
+  @media (min-width: $desktopWidth) {
+    &__item {
+      &--active {
+        border-bottom: 2px solid;
+        border-bottom-color: $colorBg;
+      }
+    }
+    &__link {
+      color: $colorTabletNav;
     }
   }
 }

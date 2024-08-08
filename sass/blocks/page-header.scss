@@ -4,8 +4,7 @@
 .page-header {
   position: relative;
 
-  min-height: 77px;
-  max-height: 264px;
+  min-height: 66px;
 
   &__wrapper {
     margin: 0 auto;
@@ -13,12 +12,69 @@
     width: 100%;
   }
 
+  &__logo {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 66px;
+  }
+
+  &__logo-mobile {
+    position: absolute;
+
+    top: 30px;
+    left: 0;
+
+    transform: translateY(-50%);
+  }
+
   @media (min-width: $tabletWidth) {
+    min-height: 82px;
+
     &__wrapper {
       display: flex;
-      justify-content: space-between;
+      gap: 286px;
 
       padding: 24px 30px;
+      padding-bottom: 0;
+    }
+
+    &__logo {
+      display: block;
+
+      width: auto;
+      min-height: 60px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+    &__logo img {
+      width: 178px;
+      height: 58px;
+
+      top: 29px;
+      left: -2px;
+    }
+
+    &__logo-name-mobile {
+      display: none;
+    }
+  }
+
+  @media (min-width: 800px) {
+    &__wrapper {
+      gap: 0;
+      justify-content: space-between;
     }
   }
 
@@ -38,5 +94,17 @@
     &__wrapper {
       padding: 50px 110px 0;
     }
+
+    &__logo img {
+      width: 202px;
+      height: 59px;
+    }
+  }
+}
+
+#catalog .page-header,
+#form .page-header {
+  &::before {
+    background: none;
   }
 }

@@ -19,8 +19,8 @@
 @mixin list-item-after {
   display: block;
   position: absolute;
-  top: -40px;
-  right: 0;
+  top: -39px;
+  right: 9px;
   z-index: -1;
 
   width: 50%;

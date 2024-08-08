@@ -2,13 +2,10 @@
 @import "mixins/mixins.scss";
 
 .advatanges {
-  // margin-bottom: 60px;
   margin-bottom: 42px;
 
   &__title {
-    // margin-top: 0;
-    // margin-bottom: 70px;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 
     font-size: $titleFontSize * 0.6;
     font-weight: inherit;
@@ -22,13 +19,9 @@
   &__item {
     position: relative;
 
-    // width: 240px;
-    // height: 230px;
     min-width: 280px;
     min-height: 60px;
     padding-left: 80px;
-    // padding-top: 115px;
-    // margin-bottom: 15px;
     margin-bottom: 20px;
 
     &::before,
@@ -40,11 +33,13 @@
     &:nth-child(2)::before {
       @include list-item-before;
       background-image: url(/img/andvantage-2.png);
+      background-position: 48% 45%;
     }
 
     &:nth-child(3)::before {
       @include list-item-before;
       background-image: url(/img/advantage-3.png);
+      background-position: 48% 50%;
     }
 
     &:nth-child(4)::before {
@@ -55,6 +50,7 @@
 
   &__description {
     padding: 0;
+    padding-top: 2px;
     margin: 0;
 
     font-family: Arial, sans-serif;
@@ -63,11 +59,14 @@
   }
 
   @media (min-width: $tabletWidth) {
-    margin-bottom: 50px;
+    margin-bottom: 43px;
+
+    border-bottom: 1px solid;
+    border-color: $colorBorderNav;
 
     &__title {
-      margin-top: 50px;
-      margin-bottom: 75px;
+      margin-top: 45px;
+      margin-bottom: 72px;
 
       font-size: $titleFontSize;
     }
@@ -78,27 +77,47 @@
 
     &__list {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
     }
 
     &__item {
-      width: 250px;
+      width: 245px;
       min-width: auto;
       min-height: 230px;
-      padding-top: 115px;
+      padding-top: 110px;
       padding-left: 0;
-      margin-bottom: 89px;
+      margin-bottom: 87px;
+
+      span {
+        display: block;
+        margin-right: 10px;
+      }
+
+      &:nth-child(2n-1) {
+        margin-right: 139px;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 70px;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-bottom: 56px;
+      }
 
       &::after,
       &:first-child::after {
         @include list-item-after;
         content: "1";
+        right: 4px;
       }
 
       &:nth-child(2)::after {
         @include list-item-after;
         content: "2";
+
+        right: 11px;
       }
 
       &:nth-child(3)::after {
@@ -110,11 +129,81 @@
         @include list-item-after;
         content: "4";
       }
+
+      &::before {
+        width: 80px;
+        height: 80px;
+      }
+
+      &:nth-child(2)::before {
+        background-position: 49% 48%;
+      }
+
+      &:nth-child(3)::before {
+        background-position: 50% 50%;
+      }
     }
 
     &__description {
       font-size: $basefontSize;
       line-height: $baseLineHeight;
+    }
+  }
+
+  @media (min-width: 800px) {
+    &__list {
+      justify-content: space-between;
+      // gap: 30%;
+    }
+
+    &__item {
+      &:nth-child(2n-1),
+      &:nth-child(2n) {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  @media (min-width: 1100px) {
+    &__list {
+      gap: 0;
+    }
+
+    &__item {
+      &:nth-child(2n-1),
+      &:nth-child(2n) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    margin-bottom: 26px;
+
+    border-bottom: none;
+
+    &__title {
+      padding-left: 3px;
+
+      margin-bottom: 70px;
+    }
+
+    &__wrapper {
+      padding: 0 110px;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+
+      &:nth-child(2n-1) {
+        margin-right: 0;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
   }
 }

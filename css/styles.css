@@ -419,7 +419,7 @@ body ul {
 }
 @media (min-width: 768px) {
   #form .page-main__title {
-    padding: 56px 30px 57px;
+    padding: 56px 29px 55px;
     font-size: 60px;
     border: none;
   }
@@ -2998,11 +2998,16 @@ body ul {
   }
   .form__main {
     min-height: 196px;
-    margin-bottom: 72px;
+    margin-bottom: 52px;
     padding: 0 66px 0 70px;
   }
+  .form__main > div {
+    margin-bottom: 20px;
+  }
   .form__label {
-    padding-top: 17px;
+    padding-top: 15px;
+    padding-left: 1px;
+    margin-right: 16px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -3018,9 +3023,9 @@ body ul {
             justify-content: space-between;
     width: 82%;
     min-height: 196px;
-    margin-left: 70px;
+    margin-left: 71px;
     margin-right: 66px;
-    padding: 25px 27px;
+    padding: 29px 27px;
     border: 1px solid;
     border-color: #e6e6e6;
   }
@@ -3031,7 +3036,7 @@ body ul {
     margin-bottom: 0;
   }
   .form__program-type label {
-    padding-left: 65px;
+    padding-left: 59px;
   }
   .form__program-type label::before {
     width: 40px;
@@ -3053,31 +3058,44 @@ body ul {
     top: 52%;
     left: 623px;
   }
-  .form__contact-data > div {
+  .form__contact-data-wrapper > div {
     padding: 0 67px 0 70px;
+    margin-bottom: 20px;
   }
-  .form__contact-data > div:last-of-type {
+  .form__contact-data-wrapper > div:last-of-type {
     margin-bottom: 0;
   }
+  .form__contact-data-wrapper > div > label {
+    margin-right: 19px;
+  }
+  .form__contact-data-wrapper > div:nth-child(2) > label {
+    margin-right: 13px;
+  }
   .form__mail-icon, .form__phone-icon {
-    right: 50px;
+    right: 86px;
   }
   .form__mail-icon {
     top: 39.37%;
   }
   .form__phone-icon {
     top: 35.42%;
+    right: 83px;
   }
   .form__title {
-    padding: 70px;
+    padding: 75px 69px 76px;
     font-size: 36px;
     line-height: 36px;
   }
   .form__comment {
     min-height: 351px;
   }
+  .form__comment > h2 {
+    padding-top: 65px;
+  }
+  .form__comment > h2::before, .form__comment > h2::after {
+    top: 49%;
+  }
   .form__comment > h2::after {
-    top: 52%;
     left: 290px;
   }
   .form__comment > div {
@@ -3085,13 +3103,19 @@ body ul {
   }
   .form__comment > div > textarea {
     min-height: 174px;
-    padding: 16px 20px;
+    padding: 14px 19px;
   }
   .form__additional {
     min-height: 270px;
   }
+  .form__additional > h2 {
+    padding-top: 60px;
+    padding-bottom: 57px;
+  }
+  .form__additional > h2::before, .form__additional > h2::after {
+    top: 53.5%;
+  }
   .form__additional > h2::after {
-    top: 52%;
     left: 322px;
   }
   .form__additional-wrapper {
@@ -3102,20 +3126,23 @@ body ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 0 70px;
   }
   .form__additional-wrapper > div {
-    width: 50%;
+    width: 45.276166%;
     min-height: 40px;
     padding: 0;
-    padding-left: 60px;
+    padding-left: 58px;
     margin-bottom: 32px;
   }
   .form__additional-wrapper > div > label {
     padding: 0;
-    padding-top: 10px;
+    padding-top: 9px;
   }
   .form__additional-wrapper > div > label::before {
     left: 0;
@@ -3129,17 +3156,17 @@ body ul {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    min-height: 148px;
-    padding: 24px 67px 32px 70px;
+    min-height: 146px;
+    padding: 22px 67px 32px 71px;
   }
   .form__button {
-    width: 44.778481%;
+    width: 44.878481%;
     min-height: 52px;
-    margin-right: 60px;
+    margin-right: 61px;
     font-size: 20px;
   }
   .form__required {
-    margin-top: 15px;
+    margin-top: 16px;
     font-size: 16px;
   }
 }

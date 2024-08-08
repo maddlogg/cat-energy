@@ -421,12 +421,18 @@
     &__main {
       min-height: 196px;
 
-      margin-bottom: 72px;
+      margin-bottom: 52px;
       padding: 0 66px 0 70px;
+
+      & > div {
+        margin-bottom: 20px;
+      }
     }
 
     &__label {
-      padding-top: 17px;
+      padding-top: 15px;
+      padding-left: 1px;
+      margin-right: 16px;
 
       font-size: $basefontSize * 1.25;
       line-height: 20px;
@@ -447,9 +453,9 @@
       width: 82%;
       min-height: 196px;
 
-      margin-left: 70px;
+      margin-left: 71px;
       margin-right: 66px;
-      padding: 25px 27px;
+      padding: 29px 27px;
 
       border: 1px solid;
       border-color: $colorBorderNav;
@@ -463,7 +469,7 @@
       }
 
       label {
-        padding-left: 65px;
+        padding-left: 59px;
 
         &::before {
           width: 40px;
@@ -491,19 +497,32 @@
         top: 52%;
         left: 623px;
       }
+    }
 
+    &__contact-data-wrapper {
       & > div {
         padding: 0 67px 0 70px;
+        margin-bottom: 20px;
 
         &:last-of-type {
           margin-bottom: 0;
+        }
+
+        & > label {
+          margin-right: 19px;
+        }
+      }
+
+      & > div:nth-child(2) {
+        & > label {
+          margin-right: 13px;
         }
       }
     }
 
     &__mail-icon,
     &__phone-icon {
-      right: 50px;
+      right: 86px;
     }
 
     &__mail-icon {
@@ -512,10 +531,11 @@
 
     &__phone-icon {
       top: 35.42%;
+      right: 83px;
     }
 
     &__title {
-      padding: 70px;
+      padding: 75px 69px 76px;
 
       font-size: $titleFontSizeSmall;
       line-height: 36px;
@@ -524,8 +544,16 @@
     &__comment {
       min-height: 351px;
 
+      & > h2 {
+        padding-top: 65px;
+      }
+
+      & > h2::before,
       & > h2::after {
-        top: 52%;
+        top: 49%;
+      }
+
+      & > h2::after {
         left: 290px;
       }
 
@@ -535,7 +563,7 @@
         & > textarea {
           min-height: 174px;
 
-          padding: 16px 20px;
+          padding: 14px 19px;
         }
       }
     }
@@ -543,8 +571,17 @@
     &__additional {
       min-height: 270px;
 
+      & > h2 {
+        padding-top: 60px;
+        padding-bottom: 57px;
+      }
+
+      & > h2::before,
       & > h2::after {
-        top: 52%;
+        top: 53.5%;
+      }
+
+      & > h2::after {
         left: 322px;
       }
     }
@@ -552,21 +589,22 @@
     &__additional-wrapper {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       flex-wrap: wrap;
 
       padding: 0 70px;
 
       & > div {
-        width: 50%;
+        width: 45.276166%;
         min-height: 40px;
 
         padding: 0;
-        padding-left: 60px;
+        padding-left: 58px;
         margin-bottom: 32px;
 
         & > label {
           padding: 0;
-          padding-top: 10px;
+          padding-top: 9px;
         }
 
         & > label::before {
@@ -582,22 +620,22 @@
       display: flex;
       align-items: flex-start;
 
-      min-height: 148px;
+      min-height: 146px;
 
-      padding: 24px 67px 32px 70px;
+      padding: 22px 67px 32px 71px;
     }
 
     &__button {
-      width: 44.778481%;
+      width: 44.878481%;
       min-height: 52px;
 
-      margin-right: 60px;
+      margin-right: 61px;
 
       font-size: $basefontSize * 1.25;
     }
 
     &__required {
-      margin-top: 15px;
+      margin-top: 16px;
 
       font-size: $basefontSize;
     }

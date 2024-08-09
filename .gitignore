@@ -9,3 +9,4 @@ build/
 *.sublime*
 Thumbs.db
 source/css/*.css
+node_modules/

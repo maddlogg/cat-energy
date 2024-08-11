@@ -69,12 +69,25 @@
             <p class="programms__slogan">Занялся собой? Займись котом!</p>
             <picture>
               <source
+                type="image/webp"
                 media="(min-width: 1440px)"
-                srcset="img/index-can.png.png"
+                srcset="img/index-can.png.webp 1x, img/index-can.png-2x.webp 2x"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/index-can-mobile.webp        1x,
+                  img/index-can-mobile.png-2x.webp 2x
+                "
+              />
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/index-can.png.png 1x, img/index-can.png-2x.png 2x"
               />
               <img
                 class="programms__logo-image"
                 src="img/index-can-mobile.png"
+                srcset="img/index-can-mobile.png-2x.png 2x"
                 width="280"
                 height="270"
                 alt="Упаковка функционального питания для котов Cat Energy"
@@ -176,12 +189,31 @@
                 <div class="example__before-wrapper">
                   <picture>
                     <source
+                      type="image/webp"
                       media="(min-width: 768px)"
-                      srcset="/img/before-desktop.png.png"
+                      srcset="
+                        img/before-desktop.png.webp    1x,
+                        img/before-desktop.png-2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/before-mobile.webp    1x,
+                        img/before-mobile-2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/before-desktop.png.png    1x,
+                        img/before-desktop.png-2x.png 2x
+                      "
                     />
                     <img
                       class="example__before-image"
                       src="img/before-mobile.png"
+                      srcset="img/before-mobile-2x.png 2x"
                       width="311"
                       height="232"
                       alt="Фото кота до использования программы"
@@ -193,15 +225,34 @@
                 <div class="example__after-wrapper">
                   <picture>
                     <source
+                      type="image/webp"
                       media="(min-width: 768px)"
-                      srcset="/img/after-desktop.png.png"
+                      srcset="
+                        /img/after-desktop.png.webp   1x,
+                        img/after-desktop.png-2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/after-mobile.webp    1x,
+                        img/after-mobile-2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        /img/after-desktop.png.png   1x,
+                        img/after-desktop.png-2x.png 2x
+                      "
                     />
                     <img
                       class="example__after-image"
                       src="img/after-mobile.png"
-                      width="251"
-                      height="240"
-                      alt="Фото кота после использования программы"
+                      srcset="img/after-mobile-2x.png 2x"
+                      width="311"
+                      height="232"
+                      alt="Фото кота до использования программы"
                     />
                   </picture>
                 </div>
@@ -271,7 +322,7 @@
                   height="12"
                   viewBox="0 0 22 12"
                 >
-                  <use xlink:href="icons.svg#m-vk.svg"></use>
+                  <use xlink:href="/img/icons.svg#m-vk.svg"></use>
                 </svg>
               </a>
             </li>
@@ -285,7 +336,7 @@
                   height="16"
                   viewBox="0 0 16 16"
                 >
-                  <use xlink:href="icons.svg#m-insta.svg"></use>
+                  <use xlink:href="/img/icons.svg#m-insta.svg"></use>
                 </svg>
               </a>
             </li>
@@ -299,7 +350,7 @@
                   height="19"
                   viewBox="0 0 10 19"
                 >
-                  <use xlink:href="icons.svg#m-fb.svg"></use>
+                  <use xlink:href="/img/icons.svg#m-fb.svg"></use>
                 </svg>
               </a>
             </li>
@@ -314,8 +365,5 @@
       </div>
     </footer>
     <script src="/js/scripts.min.js"></script>
-    <!-- <script src="/js/map.js"></script>
-    <script src="/js/navigation.js"></script>
-    <script src="/js/slider.js"></script> -->
   </body>
 </html>

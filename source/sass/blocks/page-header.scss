@@ -88,7 +88,20 @@
       width: 720px;
       height: 696px;
 
-      background: url(/img/index-background-desktop.jpg.jpg) 50% no-repeat;
+      background-image: url("/img/index-background-desktop.jpg.jpg");
+      background-image: image-set(
+        url("/img/index-background-desktop.jpg.webp"),
+        url("/img/index-background-desktop.jpg.jpg")
+      );
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/index-background-desktop.jpg-2x.jpg");
+        background-image: image-set(
+          url("/img/index-background-desktop.jpg-2x.webp"),
+          url("/img/index-background-desktop.jpg-2x.jpg")
+        );
+      }
+      background-position: 50%;
+      background-repeat: no-repeat;
     }
 
     &__wrapper {

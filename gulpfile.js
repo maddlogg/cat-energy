@@ -7,8 +7,8 @@ const posthtml = require("gulp-posthtml");
 const autoprefixer = require("autoprefixer");
 const cssmin = require("gulp-csso");
 const rename = require("gulp-rename");
-const imagemin = import("gulp-imagemin");
-const webp = import("gulp-webp");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const sourcemaps = require("gulp-sourcemaps");
 const server = require("browser-sync").create();
 const { run } = require("node:test");
@@ -54,22 +54,35 @@ gulp.task("serve", function () {
 
 gulp.task("images", function () {
   return gulp
-    .src("source/img/**/*.{png,jpg,svg}")
+    .src(["build/img/**/*.{png,jpg,svg}"], {
+      encoding: false,
+    })
     .pipe(
       imagemin([
         imagemin.optipng({ optimizationLevel: 3 }),
-        imagemin.jpegtran({ progressive: true }),
-        imagemin.svgo(),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.svgo({
+          plugins: [
+            { optimizationLevel: 3 },
+            { progessive: true },
+            { interlaced: true },
+            { removeViewBox: false },
+            { removeUselessStrokeAndFill: false },
+            { cleanupIDs: false },
+          ],
+        }),
       ])
     )
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
   return gulp
-    .src("source/img/**/*.{.png, jpg}")
+    .src(["build/img/**/*.{png,jpg}"], {
+      encoding: false,
+    })
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
@@ -105,10 +118,7 @@ gulp.task("clean", function () {
   return del(["build"]);
 });
 
-gulp.task("build", gulp.series("clean", "copy", "styles", "html"));
-
-// exports.watch = function () {
-//   gulp.watch("./sass/*.scss", gulp.series("styles"));
-//   gulp.watch("./sass/blocks/*.scss", gulp.series("styles"));
-//   gulp.watch("./sass/variables/*.scss", gulp.series("styles"));
-// };
+gulp.task(
+  "build",
+  gulp.series("clean", "copy", "styles", "html", "images", "webp")
+);

@@ -138,5 +138,9 @@ gulp.task("clean", function () {
 
 gulp.task(
   "build",
-  gulp.series("clean", "copy", "styles", "html", "scripts", "images", "webp")
+  gulp.series(
+    "clean",
+    "copy",
+    gulp.parallel("styles", "html", "scripts", "images", "webp")
+  )
 );

@@ -17,6 +17,8 @@ const browserSync = require("browser-sync");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
 const babel = require("gulp-babel");
+const include = require("posthtml-include");
+const ttf2woff2 = require("gulp-ttf2woff2");
 
 gulp.task("styles", function () {
   return gulp
@@ -86,31 +88,47 @@ gulp.task("webp", function () {
 });
 
 gulp.task("html", function () {
-  return gulp.src("source/*html").pipe(posthtml()).pipe(gulp.dest("build"));
+  return gulp
+    .src("source/*html")
+    .pipe(posthtml([include()]))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("scripts", function () {
   return gulp
     .src(["source/js/**/*.js"])
+    .pipe(concat("scripts.min.js"))
     .pipe(
       babel({
         presets: ["@babel/preset-env"],
       })
     )
-    .pipe(concat("scripts.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js/"))
     .pipe(server.stream());
 });
 
+gulp.task("fonts", function () {
+  return gulp
+    .src(["source/fonts/**/*.ttf"], {
+      encoding: false,
+      removeBOM: false,
+    })
+    .pipe(ttf2woff2())
+    .pipe(gulp.dest("source/fonts/"));
+});
+
 gulp.task("copy", function () {
   return gulp
-    .src(["source/fonts/**/*.ttf", "source/img/**", "source/js/**/*.min.js"], {
-      base: "source",
-      buffer: true,
-      removeBOM: false,
-      encoding: false,
-    })
+    .src(
+      ["source/fonts/**/*.woff2", "source/img/**", "source/js/**/*.min.js"],
+      {
+        base: "source",
+        buffer: true,
+        removeBOM: false,
+        encoding: false,
+      }
+    )
     .pipe(gulp.dest("build"));
 });
 
@@ -120,5 +138,14 @@ gulp.task("clean", function () {
 
 gulp.task(
   "build",
-  gulp.series("clean", "copy", "styles", "html", "images", "webp")
+  gulp.series(
+    "clean",
+    "copy",
+    "styles",
+    "fonts",
+    "html",
+    "scripts",
+    "images",
+    "webp"
+  )
 );

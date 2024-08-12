@@ -138,14 +138,5 @@ gulp.task("clean", function () {
 
 gulp.task(
   "build",
-  gulp.series(
-    "clean",
-    "copy",
-    "styles",
-    "fonts",
-    "html",
-    "scripts",
-    "images",
-    "webp"
-  )
+  gulp.series("clean", "copy", "styles", "html", "scripts", "images", "webp")
 );

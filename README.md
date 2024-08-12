@@ -19,7 +19,7 @@ Cat Energy project ftom HTML Academy
 Для установки зависимостей, выполните команду:
 
 ```sh
-$ npm i
+npm i
 ```
 
 ### Запуск Development сервера

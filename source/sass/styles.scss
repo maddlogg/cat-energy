@@ -1,0 +1,101 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+@font-face {
+  font-family: "Oswald";
+  font-display: swap;
+  src: url(/fonts/Oswald-VariableFont_wght.woff2);
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: inherit;
+
+  // border: 1px solid red;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+
+  font-family: "Oswald", Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  color: $colorTextMain;
+  background-color: $colorMainBg;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.button {
+  padding: 11px 30px 10px 25px;
+  min-width: 245px;
+  min-height: 40px;
+
+  color: $colorTextNav;
+  background-color: $colorBg;
+
+  &:hover {
+    background-color: $colorButtonHvr;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@import "blocks/page-header.scss";
+@import "blocks/main-navigation.scss";
+@import "blocks/site-list.scss";
+@import "blocks/page-main.scss";
+@import "blocks/programms.scss";
+@import "blocks/slim.scss";
+@import "blocks/weight.scss";
+@import "blocks/advatanges.scss";
+@import "blocks/example.scss";
+@import "blocks/slider.scss";
+@import "blocks/contacts.scss";
+@import "blocks/info.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+@import "blocks/catalog.scss";
+@import "blocks/catalog-additional.scss";
+@import "blocks/gift.scss";
+@import "blocks/form.scss";

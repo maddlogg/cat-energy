@@ -1,0 +1,180 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.slider {
+  width: 100%;
+  min-width: 200px;
+  margin-left: 5px;
+
+  &__before-toggle,
+  &__after-toggle {
+    display: block;
+
+    padding-bottom: 1px;
+
+    font-size: $basefontSize;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__before-toggle {
+    order: -1;
+  }
+
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    margin: auto 18px;
+    padding: 6px 5px;
+    width: 25%;
+    min-width: 84px;
+    height: 14px;
+
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: $colorBorder;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+
+      width: 48%;
+      height: 6px;
+
+      border-radius: 25px;
+
+      background-color: $colorBg;
+    }
+
+    &::-moz-range-thumb {
+      appearance: none;
+      -moz-appearance: none;
+
+      width: 48%;
+      height: 6px;
+
+      border-radius: 25px;
+
+      background-color: $colorBg;
+    }
+  }
+
+  @media (min-width: $tabletWidth) {
+    &__before-toggle,
+    &__after-toggle {
+      margin-top: 15px;
+      padding-bottom: 6px;
+
+      border-bottom: 1px dotted;
+      border-bottom-color: $colorBorderToggles;
+
+      font-size: $basefontSize * 1.25;
+    }
+
+    &__input {
+      margin-left: 24px;
+      margin-right: 22px;
+      margin-bottom: 13px;
+      padding: 0;
+      width: 60.595%;
+      height: 6px;
+
+      border: none;
+      background-color: $colorInputBg;
+
+      pointer-events: none;
+
+      &::-webkit-slider-thumb {
+        width: 32px;
+        height: 32px;
+
+        border-radius: 50%;
+        border: 12px solid;
+        border-color: $colorMainBg;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 0px 1px $colorBorder,
+          0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+
+        pointer-events: auto;
+
+        &:hover {
+          box-shadow: 0px 0px 0px 1px $colorBorder,
+            0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        &:active {
+          width: 30px;
+          height: 30px;
+
+          border: 11px solid;
+          border-color: $colorMainBg;
+
+          box-shadow: 0px 0px 0px 2px $colorBg,
+            0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      &::-moz-range-thumb {
+        width: 32px;
+        height: 32px;
+
+        border-radius: 50%;
+        border: 12px solid;
+        border-color: $colorMainBg;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 0px 1px $colorBorder,
+          0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+
+        pointer-events: auto;
+
+        &:hover {
+          box-shadow: 0px 0px 0px 1px $colorBorder,
+            0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        &:active {
+          width: 30px;
+          height: 30px;
+
+          border: 11px solid;
+          border-color: $colorMainBg;
+
+          box-shadow: 0px 0px 0px 2px $colorBg,
+            0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+
+    #before-after:hover ~ .slider__before-toggle,
+    #before-after:hover ~ .slider__after-toggle {
+      border-bottom-style: solid;
+    }
+
+    #before-after:active ~ .slider__before-toggle,
+    #before-after:active ~ .slider__after-toggle {
+      border-bottom-color: transparent;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    width: 570px;
+
+    &__before-toggle {
+      width: 45px;
+      margin-right: 25px;
+    }
+
+    &__after-toggle {
+      width: 50px;
+      margin-left: 22px;
+    }
+
+    &__input {
+      width: 474px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

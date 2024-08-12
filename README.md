@@ -5,9 +5,8 @@ Cat Energy project ftom HTML Academy
 ## Технологии
 
 - [HTML](https://html.spec.whatwg.org/multipage/)
-- [CSS](https://www.w3.org/Style/CSS/specs.en.html)
+- [CSS (Saas)]((https://sass-lang.com/))
 - [JavaScript](https://tc39.es/ecma262/)
-- [Saas](https://sass-lang.com/)
 - [Gulp](https://gulpjs.com/)
 - [Bem methodology](https://ru.bem.info/methodology/)
 

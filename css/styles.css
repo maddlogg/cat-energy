@@ -148,18 +148,18 @@ body ul {
     z-index: -1;
     width: 720px;
     height: 696px;
-    background-image: url("img/index-background-desktop.jpg.jpg");
-    background-image: -webkit-image-set(url("img/index-background-desktop.jpg.webp"), url("img/index-background-desktop.jpg.jpg"));
-    background-image: image-set(url("img/index-background-desktop.jpg.webp"), url("img/index-background-desktop.jpg.jpg"));
+    background-image: url("./img/index-background-desktop.jpg.jpg");
+    background-image: -webkit-image-set(url("./img/index-background-desktop.jpg.webp"), url("./img/index-background-desktop.jpg.jpg"));
+    background-image: image-set(url("./img/index-background-desktop.jpg.webp"), url("./img/index-background-desktop.jpg.jpg"));
     background-position: 50%;
     background-repeat: no-repeat;
   }
 }
 @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
   .page-header::before {
-    background-image: url("img/index-background-desktop.jpg-2x.jpg");
-    background-image: -webkit-image-set(url("img/index-background-desktop.jpg-2x.webp"), url("img/index-background-desktop.jpg-2x.jpg"));
-    background-image: image-set(url("img/index-background-desktop.jpg-2x.webp"), url("img/index-background-desktop.jpg-2x.jpg"));
+    background-image: url("./img/index-background-desktop.jpg-2x.jpg");
+    background-image: -webkit-image-set(url("./img/index-background-desktop.jpg-2x.webp"), url("./img/index-background-desktop.jpg-2x.jpg"));
+    background-image: image-set(url("./img/index-background-desktop.jpg-2x.webp"), url("./img/index-background-desktop.jpg-2x.jpg"));
   }
 }
 @media (min-width: 1440px) {

@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Oswald";
   font-display: swap;
-  src: url(/fonts/Oswald-VariableFont_wght.woff2);
+  src: url("../fonts/Oswald-VariableFont_wght.woff2");
 }
 html {
   -webkit-box-sizing: border-box;
@@ -1062,8 +1062,8 @@ body ul {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-image: url("../img/advantage-3.png");
-  background-image: -webkit-image-set(url("..//advantage-3.webp"), url("../img/advantage-3.png"));
-  background-image: image-set(url("..//advantage-3.webp"), url("../img/advantage-3.png"));
+  background-image: -webkit-image-set(url("../img/advantage-3.webp"), url("../img/advantage-3.png"));
+  background-image: image-set(url("../img/advantage-3.webp"), url("../img/advantage-3.png"));
   background-size: 23px 30px;
   background-position: 48% 50%;
 }

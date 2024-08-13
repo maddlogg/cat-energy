@@ -88,16 +88,16 @@
       width: 720px;
       height: 696px;
 
-      background-image: url("/img/index-background-desktop.jpg.jpg");
+      background-image: url("../img/index-background-desktop.jpg.jpg");
       background-image: image-set(
-        url("/img/index-background-desktop.jpg.webp"),
-        url("/img/index-background-desktop.jpg.jpg")
+        url("../img/index-background-desktop.jpg.webp"),
+        url("../img/index-background-desktop.jpg.jpg")
       );
       @media (min-resolution: 2dppx) {
-        background-image: url("/img/index-background-desktop.jpg-2x.jpg");
+        background-image: url("../img/index-background-desktop.jpg-2x.jpg");
         background-image: image-set(
-          url("/img/index-background-desktop.jpg-2x.webp"),
-          url("/img/index-background-desktop.jpg-2x.jpg")
+          url("../img/index-background-desktop.jpg-2x.webp"),
+          url("../img/index-background-desktop.jpg-2x.jpg")
         );
       }
       background-position: 50%;

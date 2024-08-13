@@ -8,16 +8,16 @@
 
   padding-top: 188px;
 
-  background-image: url("/img/gift-photo-mobile.jpg");
+  background-image: url("../img/gift-photo-mobile.jpg");
   background-image: image-set(
-    url("/img/gift-photo-mobile.webp"),
-    url("/img/gift-photo-mobile.jpg")
+    url("../img/gift-photo-mobile.webp"),
+    url("../img/gift-photo-mobile.jpg")
   );
   @media (min-resolution: 2dppx) {
-    background-image: url("/img/gift-photo-mobile.jpg-2x.jpg");
+    background-image: url("../img/gift-photo-mobile.jpg-2x.jpg");
     background-image: image-set(
-      url("/img/gift-photo-mobile.jpg-2x.webp"),
-      url("/img/gift-photo-mobile.jpg-2x.jpg")
+      url("../img/gift-photo-mobile.jpg-2x.webp"),
+      url("../img/gift-photo-mobile.jpg-2x.jpg")
     );
   }
   background-position: center;
@@ -33,7 +33,7 @@
     width: 55px;
     height: 60px;
 
-    background-image: url(/img/gift.svg);
+    background-image: url("../img/gift.svg");
     background-position: center;
     background-repeat: no-repeat;
 
@@ -56,16 +56,16 @@
     padding-left: 59.947917%;
     padding-right: 95px;
 
-    background-image: url("/img/gift-photo-tablet.jpg");
+    background-image: url("../img/gift-photo-tablet.jpg");
     background-image: image-set(
-      url("/img/gift-photo-tablet.webp"),
-      url("/img/gift-photo-tablet.jpg")
+      url("../img/gift-photo-tablet.webp"),
+      url("../img/gift-photo-tablet.jpg")
     );
     @media (min-resolution: 2dppx) {
-      background-image: url("/img/gift-photo-tablet.jpg-2x.jpg");
+      background-image: url("../img/gift-photo-tablet.jpg-2x.jpg");
       background-image: image-set(
-        url("/img/gift-photo-tablet.jpg-2x.webp"),
-        url("/img/gift-photo-tablet.jpg-2x.jpg")
+        url("../img/gift-photo-tablet.jpg-2x.webp"),
+        url("../img/gift-photo-tablet.jpg-2x.jpg")
       );
     }
     background-position: center;
@@ -92,16 +92,16 @@
     padding-left: 40px;
     padding-right: 40px;
 
-    background-image: url("/img/gift-photo-desktop.jpg");
+    background-image: url("../img/gift-photo-desktop.jpg");
     background-image: image-set(
-      url("/img/gift-photo-desktop.webp"),
-      url("/img/gift-photo-desktop.jpg")
+      url("../img/gift-photo-desktop.webp"),
+      url("../img/gift-photo-desktop.jpg")
     );
     @media (min-resolution: 2dppx) {
-      background-image: url("/img/gift-photo-desktop.jpg-2x.jpg");
+      background-image: url("../img/gift-photo-desktop.jpg-2x.jpg");
       background-image: image-set(
-        url("/img/gift-photo-desktop.jpg-2x.webp"),
-        url("/img/gift-photo-desktop.jpg-2x.jpg")
+        url("../img/gift-photo-desktop.jpg-2x.webp"),
+        url("../img/gift-photo-desktop.jpg-2x.jpg")
       );
     }
     background-position: top;

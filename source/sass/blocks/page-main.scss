@@ -2,16 +2,16 @@
 @import "mixins/mixins.scss";
 
 #index .page-main {
-  background-image: url("/img/index-background-mobile.jpg");
+  background-image: url("../img/index-background-mobile.jpg");
   background-image: image-set(
-    url("/img/index-background-mobile.webp"),
-    url("/img/index-background-mobile.jpg")
+    url("../img/index-background-mobile.webp"),
+    url("../img/index-background-mobile.jpg")
   );
   @media (min-resolution: 2dppx) {
-    background-image: url("/img/index-background-mobile-2x.jpg");
+    background-image: url("../img/index-background-mobile-2x.jpg");
     background-image: image-set(
-      url("/img/index-background-mobile-2x.webp"),
-      url("/img/index-background-mobile-2x.jpg")
+      url("../img/index-background-mobile-2x.webp"),
+      url("../img/index-background-mobile-2x.jpg")
     );
   }
   background-position: top center;

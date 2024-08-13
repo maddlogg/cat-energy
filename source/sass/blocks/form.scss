@@ -234,7 +234,7 @@
     width: 17px;
     height: 13px;
 
-    mask-image: url(/img/mail.svg);
+    mask-image: url("../img/mail.svg");
   }
 
   &__phone-icon {
@@ -244,7 +244,7 @@
     width: 20px;
     height: 20px;
 
-    mask-image: url(/img/phone.svg);
+    mask-image: url("../img/phone.svg");
   }
 
   &__title {
@@ -326,7 +326,7 @@
       }
 
       & > input:checked + label::before {
-        background-image: url(/img/tick.svg);
+        background-image: url("../img/tick.svg");
         background-position: 50% 50%;
         background-repeat: no-repeat;
       }

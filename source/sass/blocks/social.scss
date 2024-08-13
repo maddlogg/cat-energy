@@ -85,7 +85,7 @@
     }
 
     &__link--vk {
-      mask-image: url(/img/vk.svg);
+      mask-image: url("../img/vk.svg");
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: auto;
@@ -98,7 +98,7 @@
     }
 
     &__link--inst {
-      mask-image: url(/img/insta.svg);
+      mask-image: url("../img/insta.svg");
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: auto;
@@ -111,7 +111,7 @@
     }
 
     &__link--fb {
-      mask-image: url(/img/fb.svg);
+      mask-image: url("../img/fb.svg");
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: auto;

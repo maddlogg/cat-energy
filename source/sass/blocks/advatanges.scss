@@ -27,16 +27,16 @@
     &::before,
     &:first-child::before {
       @include list-item-before;
-      background-image: url("/img/advantage-1.png");
+      background-image: url("../img/advantage-1.png");
       background-image: image-set(
-        url("/img/advantage-1.webp"),
-        url("/img/advantage-1.png")
+        url("../img/advantage-1.webp"),
+        url("../img/advantage-1.png")
       );
       @media (min-resolution: 2dppx) {
-        background-image: url("/img/advantage-1.png-2x.png");
+        background-image: url("../img/advantage-1.png-2x.png");
         background-image: image-set(
-          url("/img/advantage-1.png-2x.webp"),
-          url("/img/advantage-1.png-2x.png")
+          url("../img/advantage-1.png-2x.webp"),
+          url("../img/advantage-1.png-2x.png")
         );
       }
       background-size: 26px 29px;
@@ -44,16 +44,16 @@
 
     &:nth-child(2)::before {
       @include list-item-before;
-      background-image: url("/img/andvantage-2.png");
+      background-image: url("../img/andvantage-2.png");
       background-image: image-set(
-        url("/img/andvantage-2.webp"),
-        url("/img/andvantage-2.png")
+        url("../img/andvantage-2.webp"),
+        url("../img/andvantage-2.png")
       );
       @media (min-resolution: 2dppx) {
-        background-image: url("/img/andvantage-2.png-2x.png");
+        background-image: url("../img/andvantage-2.png-2x.png");
         background-image: image-set(
-          url("/img/andvantage-2.png-2x.webp"),
-          url("/img/andvantage-2.png-2x.png")
+          url("../img/andvantage-2.png-2x.webp"),
+          url("../img/andvantage-2.png-2x.png")
         );
       }
       background-size: 29px 31px;
@@ -62,16 +62,16 @@
 
     &:nth-child(3)::before {
       @include list-item-before;
-      background-image: url(/img/advantage-3.png);
+      background-image: url("../img/advantage-3.png");
       background-image: image-set(
-        url("/img/advantage-3.webp"),
-        url("/img/advantage-3.png")
+        url("../img/advantage-3.webp"),
+        url("../img/advantage-3.png")
       );
       @media (min-resolution: 2dppx) {
-        background-image: url("/img/advantage-3.png-2x.png");
+        background-image: url("../img/advantage-3.png-2x.png");
         background-image: image-set(
-          url("/img/advantage-3.png-2x.webp"),
-          url("/img/advantage-3.png-2x.png")
+          url("../img/advantage-3.png-2x.webp"),
+          url("../img/advantage-3.png-2x.png")
         );
       }
       background-size: 23px 30px;
@@ -80,16 +80,16 @@
 
     &:nth-child(4)::before {
       @include list-item-before;
-      background-image: url(/img/advantage-4.png);
+      background-image: url("../img/advantage-4.png");
       background-image: image-set(
-        url("/img/advantage-4.webp"),
-        url("/img/advantage-4.png")
+        url("../img/advantage-4.webp"),
+        url("../img/advantage-4.png")
       );
       @media (min-resolution: 2dppx) {
-        background-image: url("/img/advantage-4.png-2x.png");
+        background-image: url("../img/advantage-4.png-2x.png");
         background-image: image-set(
-          url("/img/advantage-4.png-2x.webp"),
-          url("/img/advantage-4.png-2x.png")
+          url("../img/advantage-4.png-2x.webp"),
+          url("../img/advantage-4.png-2x.png")
         );
       }
       background-size: 26px 31px;

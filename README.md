@@ -2,6 +2,8 @@
 
 Cat Energy project ftom HTML Academy
 
+[Демо проекта](https://maddlogg.github.io/cat-energy/)
+
 ## Технологии
 
 - [HTML](https://html.spec.whatwg.org/multipage/)
@@ -12,7 +14,7 @@ Cat Energy project ftom HTML Academy
 
 ### Требования
 
-Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/).
+Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/) v.20.12.0 или выше.
 
 ### Установка зависимостей
 
@@ -36,6 +38,14 @@ npm start
 
 ```sh
 npm run build
+```
+
+### Создание deploy версии
+
+Чтобы выполнить deploy сборку, и выложить проект на хостинг GH Pages выполните команду:
+
+```sh
+npm run deploy
 ```
 
 ### Структура проекта

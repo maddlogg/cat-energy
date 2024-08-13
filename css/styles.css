@@ -373,18 +373,18 @@ body ul {
 }
 
 #index .page-main {
-  background-image: url("/img/index-background-mobile.jpg");
-  background-image: -webkit-image-set(url("/img/index-background-mobile.webp"), url("/img/index-background-mobile.jpg"));
-  background-image: image-set(url("/img/index-background-mobile.webp"), url("/img/index-background-mobile.jpg"));
+  background-image: url("./img/index-background-mobile.jpg");
+  background-image: -webkit-image-set(url("./img/index-background-mobile.webp"), url("./img/index-background-mobile.jpg"));
+  background-image: image-set(url("./img/index-background-mobile.webp"), url("./img/index-background-mobile.jpg"));
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   #index .page-main {
-    background-image: url("/img/index-background-mobile-2x.jpg");
-    background-image: -webkit-image-set(url("/img/index-background-mobile-2x.webp"), url("/img/index-background-mobile-2x.jpg"));
-    background-image: image-set(url("/img/index-background-mobile-2x.webp"), url("/img/index-background-mobile-2x.jpg"));
+    background-image: url("./img/index-background-mobile-2x.jpg");
+    background-image: -webkit-image-set(url("./img/index-background-mobile-2x.webp"), url("./img/index-background-mobile-2x.jpg"));
+    background-image: image-set(url("./img/index-background-mobile-2x.webp"), url("./img/index-background-mobile-2x.jpg"));
   }
 }
 @media (min-width: 768px) {
@@ -666,7 +666,7 @@ body ul {
   left: 30px;
   width: 35px;
   height: 49px;
-  background: url("/img/slim-icon.svg") center no-repeat;
+  background: url("./img/slim-icon.svg") center no-repeat;
   background-size: 100%;
 }
 .slim__description {
@@ -742,7 +742,7 @@ body ul {
     left: auto;
     width: 140px;
     height: 194px;
-    background-image: url("/img/slim-icon-big.svg");
+    background-image: url("./img/slim-icon-big.svg");
   }
   .slim__description {
     padding-bottom: 0;
@@ -791,7 +791,7 @@ body ul {
     right: auto;
     width: 70px;
     height: 97px;
-    background-image: url("/img/slim-icon-desktop.svg");
+    background-image: url("./img/slim-icon-desktop.svg");
   }
   .slim__description {
     margin-bottom: 40px;
@@ -840,7 +840,7 @@ body ul {
   left: 13px;
   width: 68px;
   height: 28px;
-  background: url("/img/weight-icon.svg") center no-repeat;
+  background: url("./img/weight-icon.svg") center no-repeat;
   background-size: 100%;
 }
 .weight__description {
@@ -916,7 +916,7 @@ body ul {
     left: auto;
     width: 268px;
     height: 112px;
-    background-image: url("/img/weight-icon-big.svg");
+    background-image: url("./img/weight-icon-big.svg");
   }
   .weight__description {
     padding-bottom: 0;
@@ -965,7 +965,7 @@ body ul {
     right: auto;
     width: 134px;
     height: 56px;
-    background-image: url("/img/weight-icon-desktop.svg");
+    background-image: url("./img/weight-icon-desktop.svg");
   }
   .weight__description {
     margin-bottom: 40px;
@@ -1012,16 +1012,16 @@ body ul {
   background-color: #68b738;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("/img/advantage-1.png");
-  background-image: -webkit-image-set(url("/img/advantage-1.webp"), url("/img/advantage-1.png"));
-  background-image: image-set(url("/img/advantage-1.webp"), url("/img/advantage-1.png"));
+  background-image: url("./img/advantage-1.png");
+  background-image: -webkit-image-set(url("./img/advantage-1.webp"), url("./img/advantage-1.png"));
+  background-image: image-set(url("./img/advantage-1.webp"), url("./img/advantage-1.png"));
   background-size: 26px 29px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .advatanges__item::before, .advatanges__item:first-child::before {
-    background-image: url("/img/advantage-1.png-2x.png");
-    background-image: -webkit-image-set(url("/img/advantage-1.png-2x.webp"), url("/img/advantage-1.png-2x.png"));
-    background-image: image-set(url("/img/advantage-1.png-2x.webp"), url("/img/advantage-1.png-2x.png"));
+    background-image: url("./img/advantage-1.png-2x.png");
+    background-image: -webkit-image-set(url("./img/advantage-1.png-2x.webp"), url("./img/advantage-1.png-2x.png"));
+    background-image: image-set(url("./img/advantage-1.png-2x.webp"), url("./img/advantage-1.png-2x.png"));
   }
 }
 .advatanges__item:nth-child(2)::before {
@@ -1036,17 +1036,17 @@ body ul {
   background-color: #68b738;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("/img/andvantage-2.png");
-  background-image: -webkit-image-set(url("/img/andvantage-2.webp"), url("/img/andvantage-2.png"));
-  background-image: image-set(url("/img/andvantage-2.webp"), url("/img/andvantage-2.png"));
+  background-image: url("./img/andvantage-2.png");
+  background-image: -webkit-image-set(url("./img/andvantage-2.webp"), url("./img/andvantage-2.png"));
+  background-image: image-set(url("./img/andvantage-2.webp"), url("./img/andvantage-2.png"));
   background-size: 29px 31px;
   background-position: 48% 45%;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .advatanges__item:nth-child(2)::before {
-    background-image: url("/img/andvantage-2.png-2x.png");
-    background-image: -webkit-image-set(url("/img/andvantage-2.png-2x.webp"), url("/img/andvantage-2.png-2x.png"));
-    background-image: image-set(url("/img/andvantage-2.png-2x.webp"), url("/img/andvantage-2.png-2x.png"));
+    background-image: url("./img/andvantage-2.png-2x.png");
+    background-image: -webkit-image-set(url("./img/andvantage-2.png-2x.webp"), url("./img/andvantage-2.png-2x.png"));
+    background-image: image-set(url("./img/andvantage-2.png-2x.webp"), url("./img/andvantage-2.png-2x.png"));
   }
 }
 .advatanges__item:nth-child(3)::before {
@@ -1061,17 +1061,17 @@ body ul {
   background-color: #68b738;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(/img/advantage-3.png);
-  background-image: -webkit-image-set(url("/img/advantage-3.webp"), url("/img/advantage-3.png"));
-  background-image: image-set(url("/img/advantage-3.webp"), url("/img/advantage-3.png"));
+  background-image: url("./img/advantage-3.png");
+  background-image: -webkit-image-set(url("./img/advantage-3.webp"), url("./img/advantage-3.png"));
+  background-image: image-set(url("./img/advantage-3.webp"), url("./img/advantage-3.png"));
   background-size: 23px 30px;
   background-position: 48% 50%;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .advatanges__item:nth-child(3)::before {
-    background-image: url("/img/advantage-3.png-2x.png");
-    background-image: -webkit-image-set(url("/img/advantage-3.png-2x.webp"), url("/img/advantage-3.png-2x.png"));
-    background-image: image-set(url("/img/advantage-3.png-2x.webp"), url("/img/advantage-3.png-2x.png"));
+    background-image: url("./img/advantage-3.png-2x.png");
+    background-image: -webkit-image-set(url("./img/advantage-3.png-2x.webp"), url("./img/advantage-3.png-2x.png"));
+    background-image: image-set(url("./img/advantage-3.png-2x.webp"), url("./img/advantage-3.png-2x.png"));
   }
 }
 .advatanges__item:nth-child(4)::before {
@@ -1086,16 +1086,16 @@ body ul {
   background-color: #68b738;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(/img/advantage-4.png);
-  background-image: -webkit-image-set(url("/img/advantage-4.webp"), url("/img/advantage-4.png"));
-  background-image: image-set(url("/img/advantage-4.webp"), url("/img/advantage-4.png"));
+  background-image: url("./img/advantage-4.png");
+  background-image: -webkit-image-set(url("./img/advantage-4.webp"), url("./img/advantage-4.png"));
+  background-image: image-set(url("./img/advantage-4.webp"), url("./img/advantage-4.png"));
   background-size: 26px 31px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .advatanges__item:nth-child(4)::before {
-    background-image: url("/img/advantage-4.png-2x.png");
-    background-image: -webkit-image-set(url("/img/advantage-4.png-2x.webp"), url("/img/advantage-4.png-2x.png"));
-    background-image: image-set(url("/img/advantage-4.png-2x.webp"), url("/img/advantage-4.png-2x.png"));
+    background-image: url("./img/advantage-4.png-2x.png");
+    background-image: -webkit-image-set(url("./img/advantage-4.png-2x.webp"), url("./img/advantage-4.png-2x.png"));
+    background-image: image-set(url("./img/advantage-4.png-2x.webp"), url("./img/advantage-4.png-2x.png"));
   }
 }
 .advatanges__description {
@@ -2094,8 +2094,8 @@ body ul {
     display: block;
   }
   .social__link--vk {
-    -webkit-mask-image: url(/img/vk.svg);
-            mask-image: url(/img/vk.svg);
+    -webkit-mask-image: url("./img/vk.svg");
+            mask-image: url("./img/vk.svg");
     -webkit-mask-position: center;
             mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -2108,8 +2108,8 @@ body ul {
     background-color: #68b738;
   }
   .social__link--inst {
-    -webkit-mask-image: url(/img/insta.svg);
-            mask-image: url(/img/insta.svg);
+    -webkit-mask-image: url("./img/insta.svg");
+            mask-image: url("./img/insta.svg");
     -webkit-mask-position: center;
             mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -2122,8 +2122,8 @@ body ul {
     background-color: #68b738;
   }
   .social__link--fb {
-    -webkit-mask-image: url(/img/fb.svg);
-            mask-image: url(/img/fb.svg);
+    -webkit-mask-image: url("./img/fb.svg");
+            mask-image: url("./img/fb.svg");
     -webkit-mask-position: center;
             mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -2165,8 +2165,8 @@ body ul {
 .copyright__link-logo {
   width: 27px;
   height: 34px;
-  -webkit-mask-image: url(/img/htmlacademy.svg);
-          mask-image: url(/img/htmlacademy.svg);
+  -webkit-mask-image: url("./img/htmlacademy.svg");
+          mask-image: url("./img/htmlacademy.svg");
   -webkit-mask-position: center;
           mask-position: center;
   -webkit-mask-repeat: no-repeat;
